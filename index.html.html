@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikhil Saraf | Data Engineer & Data Scientist | India</title>
+<meta name="description" content="Nikhil Saraf — Data Engineer and Data Scientist based in Pune, India. Expert in SQL, Python, PySpark, Airflow, Snowflake, Databricks, and Machine Learning. Building production-grade data pipelines and AI systems.">
+<meta name="keywords" content="Data Engineer, Data Scientist, Python, SQL, PySpark, Databricks, Snowflake, Airflow, Machine Learning, Pune, India">
+<meta property="og:title" content="Nikhil Saraf | Data Engineer & Data Scientist">
+<meta property="og:description" content="Building scalable data pipelines and intelligent systems — from raw bytes to business insight.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0A0E1A;
+  --bg-card: #111827;
+  --bg-card2: #1A1F35;
+  --cyan: #00D4FF;
+  --violet: #7C3AED;
+  --orange: #FF6B35;
+  --text: #E2E8F0;
+  --text-muted: #8892A4;
+  --border: rgba(0,212,255,0.12);
+  --border2: rgba(124,58,237,0.18);
+  --mono: 'JetBrains Mono', monospace;
+  --display: 'Space Grotesk', sans-serif;
+  --body: 'Inter', sans-serif;
+  --radius: 14px;
+  --radius-sm: 8px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+::selection { background: rgba(0,212,255,0.25); }
+a { color: var(--cyan); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 6vw;
+  background: rgba(10,14,26,0.85);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+  transition: padding 0.3s;
+}
+.nav-logo {
+  font-family: var(--display); font-weight: 700; font-size: 1.15rem;
+  background: linear-gradient(120deg, var(--cyan), var(--violet));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.nav-links { display: flex; gap: 28px; list-style: none; }
+.nav-links a {
+  font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em;
+  color: var(--text-muted); transition: color 0.2s; text-decoration: none; text-transform: uppercase;
+}
+.nav-links a:hover { color: var(--cyan); }
+.nav-cta {
+  background: var(--cyan); color: #000; font-weight: 700; font-size: 0.82rem;
+  padding: 8px 18px; border-radius: 50px; letter-spacing: 0.04em;
+  text-transform: uppercase; transition: opacity 0.2s; cursor: pointer;
+}
+.nav-cta:hover { opacity: 0.85; text-decoration: none; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; }
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh; display: flex; align-items: center;
+  padding: 120px 6vw 80px;
+  position: relative; overflow: hidden;
+}
+.hero-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; width: 100%; max-width: 1280px; margin: 0 auto;
+}
+.hero-eyebrow {
+  font-family: var(--mono); font-size: 0.78rem; color: var(--cyan);
+  letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 18px;
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-eyebrow::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--cyan); }
+.hero-title {
+  font-family: var(--display); font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 700; line-height: 1.1;
+  margin-bottom: 22px; letter-spacing: -0.02em;
+}
+.hero-title .accent-cyan { color: var(--cyan); }
+.hero-title .accent-violet { color: #A78BFA; }
+.hero-subtitle {
+  font-size: 1.05rem; color: var(--text-muted); max-width: 520px; margin-bottom: 36px; line-height: 1.8;
+}
+.hero-subtitle strong { color: var(--text); font-weight: 500; }
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: linear-gradient(135deg, var(--cyan), #0094FF);
+  color: #000; font-weight: 700; font-size: 0.9rem;
+  padding: 13px 26px; border-radius: 50px; cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s; border: none;
+  text-decoration: none; letter-spacing: 0.02em;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,212,255,0.35); text-decoration: none; color: #000; }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1.5px solid var(--border); color: var(--text);
+  font-weight: 600; font-size: 0.9rem;
+  padding: 13px 26px; border-radius: 50px; cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  text-decoration: none; background: transparent;
+}
+.btn-outline:hover { border-color: var(--cyan); background: rgba(0,212,255,0.06); color: var(--cyan); text-decoration: none; }
+.hero-stats {
+  display: flex; gap: 36px; margin-top: 44px; padding-top: 36px;
+  border-top: 1px solid var(--border);
+}
+.stat-num {
+  font-family: var(--display); font-size: 1.9rem; font-weight: 700; color: var(--cyan); line-height: 1;
+}
+.stat-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; letter-spacing: 0.04em; }
+
+/* Pipeline SVG Canvas */
+.hero-visual { position: relative; display: flex; align-items: center; justify-content: center; }
+#pipeline-canvas { width: 100%; max-width: 520px; border-radius: 20px; }
+.hero-badge {
+  position: absolute; bottom: -16px; right: 0;
+  background: var(--bg-card2); border: 1px solid var(--border2);
+  border-radius: 12px; padding: 12px 18px;
+  font-family: var(--mono); font-size: 0.75rem; color: var(--cyan);
+  display: flex; align-items: center; gap: 8px;
+}
+.pulse { width: 8px; height: 8px; border-radius: 50%; background: #22C55E; animation: pulse 1.8s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
+
+/* ── SECTION COMMON ── */
+section { padding: 100px 6vw; }
+.section-inner { max-width: 1280px; margin: 0 auto; }
+.section-tag {
+  font-family: var(--mono); font-size: 0.75rem; color: var(--cyan);
+  letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-tag::before { content:''; display:inline-block; width:24px; height:1px; background:var(--cyan); }
+.section-title {
+  font-family: var(--display); font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; line-height: 1.15;
+}
+.section-desc { color: var(--text-muted); max-width: 580px; font-size: 1rem; margin-bottom: 56px; }
+.divider { width: 48px; height: 3px; background: linear-gradient(90deg, var(--cyan), var(--violet)); border-radius: 2px; margin: 16px 0 56px; }
+
+/* ── ABOUT ── */
+#about { background: var(--bg-card); }
+.about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 70px; align-items: start; }
+.about-avatar-wrap { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+.about-avatar {
+  width: 220px; height: 220px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--violet), var(--cyan));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--display); font-size: 4rem; font-weight: 700; color: #fff;
+  position: relative;
+}
+.about-avatar::after {
+  content: ''; position: absolute; inset: -4px; border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg,var(--cyan),var(--violet)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out; mask-composite: exclude;
+}
+.about-location {
+  font-family: var(--mono); font-size: 0.8rem; color: var(--text-muted);
+  display: flex; align-items: center; gap: 6px;
+}
+.about-text p { color: var(--text-muted); line-height: 1.85; margin-bottom: 18px; }
+.about-text p strong { color: var(--text); font-weight: 500; }
+.objective-card {
+  background: var(--bg-card2); border: 1px solid var(--border2); border-radius: var(--radius);
+  padding: 24px 28px; margin-top: 28px;
+}
+.objective-card h4 { font-family: var(--display); font-weight: 600; color: var(--violet); margin-bottom: 10px; font-size: 0.95rem; letter-spacing: 0.02em; }
+.objective-card p { color: var(--text-muted); font-size: 0.92rem; margin: 0; }
+.strengths { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.strength-pill {
+  background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2);
+  color: var(--cyan); font-family: var(--mono); font-size: 0.75rem;
+  padding: 6px 14px; border-radius: 50px; letter-spacing: 0.04em;
+}
+
+/* ── SKILLS ── */
+#skills { background: var(--bg); }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.skill-category { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
+.skill-category h4 {
+  font-family: var(--display); font-size: 0.85rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--cyan);
+  margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border);
+}
+.skill-item { margin-bottom: 16px; }
+.skill-item:last-child { margin-bottom: 0; }
+.skill-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 7px; }
+.skill-name { font-size: 0.88rem; font-weight: 500; }
+.skill-level { font-family: var(--mono); font-size: 0.72rem; color: var(--text-muted); }
+.skill-bar { height: 4px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden; }
+.skill-fill { height: 100%; border-radius: 4px; transition: width 1.2s cubic-bezier(.4,0,.2,1); }
+.fill-cyan { background: linear-gradient(90deg, var(--cyan), #0094FF); }
+.fill-violet { background: linear-gradient(90deg, var(--violet), #A78BFA); }
+.fill-orange { background: linear-gradient(90deg, var(--orange), #FFD93D); }
+.learning-badge {
+  font-family: var(--mono); font-size: 0.66rem; color: var(--orange);
+  background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.25);
+  padding: 2px 8px; border-radius: 50px; margin-left: 8px; letter-spacing: 0.04em;
+}
+
+/* ── PROJECTS ── */
+#projects { background: var(--bg-card); }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; }
+.project-card {
+  background: var(--bg-card2); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+  cursor: pointer;
+}
+.project-card:hover { transform: translateY(-4px); border-color: var(--cyan); box-shadow: 0 16px 48px rgba(0,212,255,0.1); }
+.project-header { padding: 28px 28px 0; }
+.project-num { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.1em; margin-bottom: 10px; }
+.project-title { font-family: var(--display); font-size: 1.08rem; font-weight: 700; line-height: 1.3; margin-bottom: 10px; }
+.project-problem { font-size: 0.87rem; color: var(--text-muted); line-height: 1.65; }
+.project-arch {
+  margin: 20px 28px; background: #090D19; border-radius: var(--radius-sm);
+  padding: 18px; overflow: hidden;
+}
+.arch-title { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); margin-bottom: 12px; letter-spacing: 0.1em; }
+.arch-flow { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.arch-node {
+  background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.2);
+  color: var(--cyan); font-family: var(--mono); font-size: 0.72rem;
+  padding: 5px 10px; border-radius: 5px; white-space: nowrap;
+}
+.arch-node.violet { background: rgba(124,58,237,0.12); border-color: rgba(124,58,237,0.25); color: #A78BFA; }
+.arch-node.orange { background: rgba(255,107,53,0.1); border-color: rgba(255,107,53,0.25); color: var(--orange); }
+.arch-arrow { color: var(--text-muted); font-size: 0.8rem; }
+.project-body { padding: 4px 28px 24px; }
+.project-section-label { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; margin: 14px 0 6px; }
+.project-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+.project-result { font-size: 0.85rem; color: #22C55E; font-weight: 500; line-height: 1.6; }
+.project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.tag {
+  font-family: var(--mono); font-size: 0.7rem;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-muted); padding: 4px 10px; border-radius: 4px;
+}
+.project-footer {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 16px 28px; border-top: 1px solid var(--border);
+  margin-top: 4px;
+}
+.gh-link {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: var(--mono); font-size: 0.78rem; color: var(--cyan);
+  transition: gap 0.2s;
+}
+.gh-link:hover { gap: 11px; text-decoration: none; }
+.project-status { font-family: var(--mono); font-size: 0.7rem; padding: 4px 10px; border-radius: 50px; }
+.status-live { background: rgba(34,197,94,0.12); color: #22C55E; border: 1px solid rgba(34,197,94,0.25); }
+.status-prod { background: rgba(0,212,255,0.1); color: var(--cyan); border: 1px solid rgba(0,212,255,0.2); }
+
+/* ── EXPERIENCE ── */
+#experience { background: var(--bg); }
+.timeline { position: relative; padding-left: 36px; }
+.timeline::before { content:''; position:absolute; left:0; top:8px; bottom:0; width:2px; background:linear-gradient(to bottom,var(--cyan),var(--violet),transparent); }
+.timeline-item { position: relative; margin-bottom: 52px; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-dot {
+  position: absolute; left: -42px; top: 6px;
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--cyan);
+  box-shadow: 0 0 12px rgba(0,212,255,0.5);
+}
+.exp-company { font-family: var(--mono); font-size: 0.78rem; color: var(--cyan); letter-spacing: 0.06em; margin-bottom: 4px; }
+.exp-role { font-family: var(--display); font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; }
+.exp-period { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 18px; font-family: var(--mono); }
+.exp-desc { color: var(--text-muted); font-size: 0.92rem; line-height: 1.75; }
+.exp-achievements { margin-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+.achievement {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 14px 18px;
+}
+.achievement-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+.achievement-text { font-size: 0.87rem; color: var(--text-muted); line-height: 1.6; }
+.achievement-text strong { color: var(--text); font-weight: 600; }
+
+/* ── CERTIFICATIONS ── */
+#certifications { background: var(--bg-card); }
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
+.cert-card {
+  background: var(--bg-card2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px 20px; text-align: center;
+  transition: border-color 0.2s, transform 0.2s;
+  position: relative; overflow: hidden;
+}
+.cert-card::before {
+  content:''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(0,212,255,0.04), rgba(124,58,237,0.04));
+  opacity: 0; transition: opacity 0.25s;
+}
+.cert-card:hover { border-color: var(--cyan); transform: translateY(-3px); }
+.cert-card:hover::before { opacity: 1; }
+.cert-icon { font-size: 2.2rem; margin-bottom: 12px; }
+.cert-name { font-family: var(--display); font-weight: 700; font-size: 0.92rem; margin-bottom: 4px; }
+.cert-issuer { font-family: var(--mono); font-size: 0.72rem; color: var(--text-muted); letter-spacing: 0.06em; }
+.cert-status {
+  display: inline-block; margin-top: 12px;
+  font-family: var(--mono); font-size: 0.68rem; padding: 3px 10px; border-radius: 50px;
+}
+.cert-earned { background: rgba(34,197,94,0.1); color: #22C55E; border: 1px solid rgba(34,197,94,0.2); }
+.cert-progress { background: rgba(255,107,53,0.1); color: var(--orange); border: 1px solid rgba(255,107,53,0.2); }
+
+/* ── GITHUB ── */
+#github-section { background: var(--bg); }
+.github-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+.github-repos { display: flex; flex-direction: column; gap: 16px; }
+.repo-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 22px 24px;
+  transition: border-color 0.2s;
+}
+.repo-card:hover { border-color: var(--cyan); }
+.repo-name { font-family: var(--mono); font-size: 0.9rem; color: var(--cyan); font-weight: 500; margin-bottom: 6px; }
+.repo-desc { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.6; }
+.repo-meta { display: flex; gap: 16px; font-family: var(--mono); font-size: 0.75rem; color: var(--text-muted); }
+.repo-lang { display: flex; align-items: center; gap: 6px; }
+.lang-dot { width: 10px; height: 10px; border-radius: 50%; }
+.contrib-box {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px;
+}
+.contrib-title { font-family: var(--display); font-weight: 700; margin-bottom: 22px; }
+#contrib-graph { display: grid; grid-template-columns: repeat(52, 1fr); gap: 3px; }
+.cg-cell { aspect-ratio: 1; border-radius: 2px; }
+.cg-0 { background: rgba(255,255,255,0.05); }
+.cg-1 { background: rgba(0,212,255,0.25); }
+.cg-2 { background: rgba(0,212,255,0.5); }
+.cg-3 { background: rgba(0,212,255,0.75); }
+.cg-4 { background: var(--cyan); }
+.contrib-legend { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); }
+
+/* ── BLOG ── */
+#blog { background: var(--bg-card); }
+.blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 22px; }
+.blog-card {
+  background: var(--bg-card2); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column;
+  transition: border-color 0.25s, transform 0.2s;
+}
+.blog-card:hover { border-color: var(--violet); transform: translateY(-3px); }
+.blog-topic { font-family: var(--mono); font-size: 0.7rem; color: var(--violet); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+.blog-title { font-family: var(--display); font-weight: 700; font-size: 1rem; line-height: 1.4; margin-bottom: 10px; }
+.blog-excerpt { font-size: 0.86rem; color: var(--text-muted); line-height: 1.65; flex: 1; }
+.blog-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+.blog-date { font-family: var(--mono); font-size: 0.72rem; color: var(--text-muted); }
+.blog-read { font-size: 0.8rem; color: var(--cyan); font-weight: 500; }
+
+/* ── CONTACT ── */
+#contact { background: var(--bg); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
+.contact-info h3 { font-family: var(--display); font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
+.contact-info p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.8; margin-bottom: 32px; }
+.contact-links { display: flex; flex-direction: column; gap: 14px; }
+.contact-link-item {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: 14px 18px;
+  transition: border-color 0.2s; text-decoration: none; color: var(--text);
+}
+.contact-link-item:hover { border-color: var(--cyan); text-decoration: none; color: var(--text); }
+.contact-link-icon { font-size: 1.3rem; flex-shrink: 0; }
+.contact-link-label { font-size: 0.8rem; color: var(--text-muted); font-family: var(--mono); }
+.contact-link-val { font-size: 0.92rem; font-weight: 500; }
+.contact-form { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; font-family: var(--mono); font-size: 0.75rem; color: var(--text-muted); letter-spacing: 0.08em; margin-bottom: 8px; text-transform: uppercase; }
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%; background: var(--bg-card2); border: 1px solid var(--border);
+  color: var(--text); font-family: var(--body); font-size: 0.92rem;
+  padding: 12px 16px; border-radius: var(--radius-sm); outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus { border-color: var(--cyan); }
+.form-group textarea { resize: vertical; min-height: 110px; }
+.form-submit {
+  width: 100%; background: linear-gradient(135deg, var(--cyan), #0094FF);
+  color: #000; font-weight: 700; font-size: 0.92rem; padding: 14px;
+  border-radius: var(--radius-sm); border: none; cursor: pointer;
+  transition: opacity 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.form-submit:hover { opacity: 0.88; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--bg-card); border-top: 1px solid var(--border);
+  padding: 36px 6vw; text-align: center;
+}
+.footer-inner { max-width: 1280px; margin: 0 auto; }
+.footer-logo { font-family: var(--display); font-weight: 700; font-size: 1.1rem; background: linear-gradient(120deg,var(--cyan),var(--violet)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom: 10px; }
+.footer-copy { font-family: var(--mono); font-size: 0.75rem; color: var(--text-muted); }
+.footer-tagline { font-style: italic; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 8px; }
+
+/* ── ANIMATIONS ── */
+.fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* ── MOBILE ── */
+@media (max-width: 900px) {
+  .hero-grid, .about-grid, .github-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { display: none; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .form-row { grid-template-columns: 1fr; }
+  .hero-stats { gap: 20px; }
+  section { padding: 70px 5vw; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .cert-grid { grid-template-columns: repeat(auto-fill, minmax(160px,1fr)); }
+}
+@media (max-width: 520px) {
+  .hero-title { font-size: 2rem; }
+  .hero-stats { flex-direction: column; gap: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">NS.dev</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Hire Me</a>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid">
+    <div class="hero-content">
+      <div class="hero-eyebrow fade-up">Data Engineer · Data Scientist · Pune, India</div>
+      <h1 class="hero-title fade-up delay-1">
+        Turning Raw Data<br>into <span class="accent-cyan">Pipelines</span> &<br><span class="accent-violet">Intelligence</span>
+      </h1>
+      <p class="hero-subtitle fade-up delay-2">
+        I'm <strong>Nikhil Saraf</strong> — a Data professional evolving from deep SQL roots into
+        <strong>large-scale data engineering</strong> and <strong>machine learning systems</strong>.
+        I build things that move data at scale and make it think.
+      </p>
+      <div class="hero-actions fade-up delay-3">
+        <a href="#" class="btn-primary" onclick="return false;">
+          ⬇ Download Resume
+        </a>
+        <a href="#contact" class="btn-outline">
+          ✉ Get in Touch
+        </a>
+      </div>
+      <div class="hero-stats fade-up delay-4">
+        <div>
+          <div class="stat-num" id="counter-exp">4+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div>
+          <div class="stat-num">5</div>
+          <div class="stat-label">Production Projects</div>
+        </div>
+        <div>
+          <div class="stat-num" id="counter-rows">50M+</div>
+          <div class="stat-label">Rows Processed</div>
+        </div>
+        <div>
+          <div class="stat-num">12+</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual fade-up delay-2">
+      <svg id="pipeline-canvas" viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#0094FF" stop-opacity="0.8"/>
+          </linearGradient>
+          <linearGradient id="gViolet" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="#A78BFA" stop-opacity="0.8"/>
+          </linearGradient>
+          <filter id="glow">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+          <marker id="arrowCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="#00D4FF"/>
+          </marker>
+          <marker id="arrowViolet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+            <path d="M0,0 L10,5 L0,10 Z" fill="#A78BFA"/>
+          </marker>
+        </defs>
+        <!-- Background grid -->
+        <rect width="520" height="360" fill="#090D19" rx="16"/>
+        <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+          <line x1="0" y1="60" x2="520" y2="60"/><line x1="0" y1="120" x2="520" y2="120"/>
+          <line x1="0" y1="180" x2="520" y2="180"/><line x1="0" y1="240" x2="520" y2="240"/>
+          <line x1="0" y1="300" x2="520" y2="300"/>
+          <line x1="86" y1="0" x2="86" y2="360"/><line x1="172" y1="0" x2="172" y2="360"/>
+          <line x1="258" y1="0" x2="258" y2="360"/><line x1="344" y1="0" x2="344" y2="360"/>
+          <line x1="430" y1="0" x2="430" y2="360"/>
+        </g>
+        <!-- Nodes Row 1: Sources -->
+        <rect x="20" y="30" width="70" height="36" rx="8" fill="rgba(0,212,255,0.1)" stroke="#00D4FF" stroke-width="1.5"/>
+        <text x="55" y="52" text-anchor="middle" fill="#00D4FF" font-family="JetBrains Mono" font-size="10">MySQL</text>
+        <rect x="20" y="80" width="70" height="36" rx="8" fill="rgba(0,212,255,0.1)" stroke="#00D4FF" stroke-width="1.5"/>
+        <text x="55" y="102" text-anchor="middle" fill="#00D4FF" font-family="JetBrains Mono" font-size="10">Oracle</text>
+        <rect x="20" y="130" width="70" height="36" rx="8" fill="rgba(0,212,255,0.1)" stroke="#00D4FF" stroke-width="1.5"/>
+        <text x="55" y="152" text-anchor="middle" fill="#00D4FF" font-family="JetBrains Mono" font-size="10">CSV/API</text>
+        <!-- Airflow orchestrator -->
+        <rect x="150" y="55" width="90" height="90" rx="12" fill="rgba(124,58,237,0.15)" stroke="#7C3AED" stroke-width="1.5"/>
+        <text x="195" y="88" text-anchor="middle" fill="#A78BFA" font-family="JetBrains Mono" font-size="9">Airflow</text>
+        <text x="195" y="104" text-anchor="middle" fill="#A78BFA" font-family="JetBrains Mono" font-size="9">DAG</text>
+        <text x="195" y="120" text-anchor="middle" fill="#7C3AED" font-family="JetBrains Mono" font-size="8">⚙ ETL</text>
+        <!-- PySpark -->
+        <rect x="300" y="40" width="80" height="36" rx="8" fill="rgba(255,107,53,0.12)" stroke="#FF6B35" stroke-width="1.5"/>
+        <text x="340" y="62" text-anchor="middle" fill="#FF6B35" font-family="JetBrains Mono" font-size="10">PySpark</text>
+        <rect x="300" y="90" width="80" height="36" rx="8" fill="rgba(255,107,53,0.12)" stroke="#FF6B35" stroke-width="1.5"/>
+        <text x="340" y="112" text-anchor="middle" fill="#FF6B35" font-family="JetBrains Mono" font-size="10">Databricks</text>
+        <!-- DW -->
+        <rect x="430" y="55" width="78" height="90" rx="12" fill="rgba(0,212,255,0.1)" stroke="#00D4FF" stroke-width="1.5"/>
+        <text x="469" y="94" text-anchor="middle" fill="#00D4FF" font-family="JetBrains Mono" font-size="9">Data</text>
+        <text x="469" y="108" text-anchor="middle" fill="#00D4FF" font-family="JetBrains Mono" font-size="9">Warehouse</text>
+        <!-- Arrows top row -->
+        <line x1="90" y1="48" x2="148" y2="90" stroke="#00D4FF" stroke-width="1.5" marker-end="url(#arrowCyan)" opacity="0.7"/>
+        <line x1="90" y1="98" x2="148" y2="100" stroke="#00D4FF" stroke-width="1.5" marker-end="url(#arrowCyan)" opacity="0.7"/>
+        <line x1="90" y1="148" x2="148" y2="110" stroke="#00D4FF" stroke-width="1.5" marker-end="url(#arrowCyan)" opacity="0.7"/>
+        <line x1="240" y1="75" x2="298" y2="58" stroke="#A78BFA" stroke-width="1.5" marker-end="url(#arrowViolet)" opacity="0.7"/>
+        <line x1="240" y1="105" x2="298" y2="108" stroke="#A78BFA" stroke-width="1.5" marker-end="url(#arrowViolet)" opacity="0.7"/>
+        <line x1="380" y1="58" x2="428" y2="80" stroke="#FF6B35" stroke-width="1.5" opacity="0.7"/>
+        <line x1="380" y1="108" x2="428" y2="100" stroke="#FF6B35" stroke-width="1.5" opacity="0.7"/>
+        <!-- Row 2: ML Layer -->
+        <rect x="60" y="220" width="100" height="40" rx="10" fill="rgba(124,58,237,0.15)" stroke="#7C3AED" stroke-width="1.5"/>
+        <text x="110" y="245" text-anchor="middle" fill="#A78BFA" font-family="JetBrains Mono" font-size="10">ML Models</text>
+        <rect x="200" y="220" width="120" height="40" rx="10" fill="rgba(124,58,237,0.15)" stroke="#7C3AED" stroke-width="1.5"/>
+        <text x="260" y="240" text-anchor="middle" fill="#A78BFA" font-family="JetBrains Mono" font-size="9">Snowflake</text>
+        <text x="260" y="254" text-anchor="middle" fill="#A78BFA" font-family="JetBrains Mono" font-size="9">DWH</text>
+        <rect x="360" y="220" width="100" height="40" rx="10" fill="rgba(0,212,255,0.1)" stroke="#00D4FF" stroke-width="1.5"/>
+        <text x="410" y="245" text-anchor="middle" fill="#00D4FF" font-family="JetBrains Mono" font-size="10">Tableau</text>
+        <!-- Row 2 arrows -->
+        <line x1="469" y1="145" x2="300" y2="220" stroke="#00D4FF" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
+        <line x1="200" y1="240" x2="162" y2="240" stroke="#A78BFA" stroke-width="1.5" marker-end="url(#arrowViolet)" opacity="0.7"/>
+        <line x1="320" y1="240" x2="358" y2="240" stroke="#A78BFA" stroke-width="1.5" marker-end="url(#arrowCyan)" opacity="0.7"/>
+        <!-- Animated particle on pipe -->
+        <circle r="4" fill="#00D4FF" filter="url(#glow)">
+          <animateMotion dur="3s" repeatCount="indefinite">
+            <mpath href="#pipe1"/>
+          </animateMotion>
+        </circle>
+        <path id="pipe1" d="M90,98 L148,100 L240,105 L298,108 L428,100" fill="none"/>
+        <circle r="3.5" fill="#A78BFA" filter="url(#glow)">
+          <animateMotion dur="4s" repeatCount="indefinite" begin="1s">
+            <mpath href="#pipe2"/>
+          </animateMotion>
+        </circle>
+        <path id="pipe2" d="M469,145 L469,180 L260,215" fill="none"/>
+        <!-- Labels -->
+        <text x="10" y="185" fill="rgba(255,255,255,0.3)" font-family="JetBrains Mono" font-size="8">INGEST</text>
+        <text x="155" y="185" fill="rgba(255,255,255,0.3)" font-family="JetBrains Mono" font-size="8">ORCHESTRATE</text>
+        <text x="302" y="35" fill="rgba(255,255,255,0.3)" font-family="JetBrains Mono" font-size="8">PROCESS</text>
+        <text x="432" y="35" fill="rgba(255,255,255,0.3)" font-family="JetBrains Mono" font-size="8">STORE</text>
+        <text x="60" y="210" fill="rgba(255,255,255,0.3)" font-family="JetBrains Mono" font-size="8">INTELLIGENCE</text>
+        <text x="360" y="210" fill="rgba(255,255,255,0.3)" font-family="JetBrains Mono" font-size="8">VISUALIZE</text>
+        <!-- Status bar -->
+        <rect x="16" y="318" width="488" height="28" rx="6" fill="rgba(0,212,255,0.06)" stroke="rgba(0,212,255,0.15)" stroke-width="1"/>
+        <circle cx="32" cy="332" r="4" fill="#22C55E"/>
+        <text x="44" y="336" fill="rgba(255,255,255,0.5)" font-family="JetBrains Mono" font-size="9">Pipeline running · Last run: 2m ago · 847,293 rows processed</text>
+      </svg>
+      <div class="hero-badge">
+        <span class="pulse"></span> Pipeline Active
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-avatar-wrap fade-up">
+        <div class="about-avatar">NS</div>
+        <div class="about-location">📍 Pune, Maharashtra, India</div>
+        <div style="display:flex;gap:10px;margin-top:8px;">
+          <a href="https://linkedin.com" target="_blank" class="btn-outline" style="padding:8px 16px;font-size:0.8rem;">LinkedIn</a>
+          <a href="https://github.com" target="_blank" class="btn-outline" style="padding:8px 16px;font-size:0.8rem;">GitHub</a>
+        </div>
+      </div>
+      <div class="about-text fade-up delay-1">
+        <div class="section-tag">About Me</div>
+        <h2 class="section-title">The Journey from<br>Analyst to Engineer</h2>
+        <div class="divider"></div>
+        <p>I started my career writing <strong>complex SQL queries</strong> to answer business questions — and I got very good at it. But I kept hitting the same wall: the data I needed was fragmented, dirty, or simply not flowing anywhere useful. So I started building the pipes myself.</p>
+        <p>Today I architect <strong>ETL pipelines with Apache Airflow</strong>, engineer historical data warehouses, and build AI-powered systems that make predictions — not just reports. My background in data analysis gives me something most engineers lack: I understand what the data <em>means</em>, not just how to move it.</p>
+        <p>I'm actively expanding into <strong>PySpark, Databricks, Snowflake, and Machine Learning</strong>, with a goal of becoming a <strong>Senior Data Engineer and Data Scientist</strong> who can own the full data stack — from raw ingestion to intelligent output.</p>
+        <div class="objective-card">
+          <h4>🎯 Career Objective</h4>
+          <p>To build production-grade data infrastructure and ML systems at scale — engineering pipelines that are reliable, observable, and intelligent. I want to work at the intersection of data engineering and applied AI, turning messy data into systems that create measurable business impact.</p>
+        </div>
+        <div class="strengths">
+          <span class="strength-pill">ETL Pipeline Design</span>
+          <span class="strength-pill">SQL Optimization</span>
+          <span class="strength-pill">Business Intelligence</span>
+          <span class="strength-pill">Data Modeling</span>
+          <span class="strength-pill">Pipeline Debugging</span>
+          <span class="strength-pill">Cross-DB Migration</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-tag fade-up">Technical Stack</div>
+    <h2 class="section-title fade-up delay-1">Skills & Technologies</h2>
+    <p class="section-desc fade-up delay-2">A full-spectrum data toolkit — from relational databases and orchestration to distributed computing and machine learning.</p>
+    <div class="skills-grid">
+      <div class="skill-category fade-up">
+        <h4>🗄 Databases & Query</h4>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">SQL</span><span class="skill-level">Expert · 5 yrs</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:95%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">MySQL</span><span class="skill-level">Advanced · 4 yrs</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:88%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">Oracle DB</span><span class="skill-level">Intermediate · 2 yrs</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:72%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">Snowflake <span class="learning-badge">LEARNING</span></span><span class="skill-level">Beginner</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:38%"></div></div>
+        </div>
+      </div>
+      <div class="skill-category fade-up delay-1">
+        <h4>🐍 Python Ecosystem</h4>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">Python</span><span class="skill-level">Advanced · 3 yrs</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-violet" style="width:82%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">Pandas</span><span class="skill-level">Advanced</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-violet" style="width:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">NumPy</span><span class="skill-level">Intermediate</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-violet" style="width:70%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">PySpark <span class="learning-badge">LEARNING</span></span><span class="skill-level">Beginner</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-violet" style="width:35%"></div></div>
+        </div>
+      </div>
+      <div class="skill-category fade-up delay-2">
+        <h4>⚙ Data Engineering</h4>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">Apache Airflow</span><span class="skill-level">Intermediate</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-orange" style="width:68%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">Databricks <span class="learning-badge">LEARNING</span></span><span class="skill-level">Beginner</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-orange" style="width:32%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">Git / GitHub</span><span class="skill-level">Intermediate</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-orange" style="width:74%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">ETL Design</span><span class="skill-level">Intermediate</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-orange" style="width:75%"></div></div>
+        </div>
+      </div>
+      <div class="skill-category fade-up delay-3">
+        <h4>🤖 AI & Analytics</h4>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">Machine Learning <span class="learning-badge">LEARNING</span></span><span class="skill-level">Beginner</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-violet" style="width:42%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">Deep Learning <span class="learning-badge">LEARNING</span></span><span class="skill-level">Beginner</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-violet" style="width:28%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">Tableau</span><span class="skill-level">Advanced · 3 yrs</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-meta"><span class="skill-name">Excel / Power Query</span><span class="skill-level">Expert</span></div>
+          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:92%"></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="section-tag fade-up">Engineering Portfolio</div>
+    <h2 class="section-title fade-up delay-1">Production Projects</h2>
+    <p class="section-desc fade-up delay-2">End-to-end systems built to solve real business problems — from real-time CRM engines to AI-powered pricing oracles.</p>
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card fade-up">
+        <div class="project-header">
+          <div class="project-num">PROJECT · 001</div>
+          <div class="project-title">Real-Time CRM System</div>
+          <div class="project-problem">Disconnected customer touchpoints meant sales teams were working from stale data — losing deals due to poor visibility on leads, interactions, and follow-ups.</div>
+        </div>
+        <div class="project-arch">
+          <div class="arch-title">ARCHITECTURE</div>
+          <div class="arch-flow">
+            <span class="arch-node">UI / Forms</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node violet">Python API</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node">MySQL DB</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node violet">Reports</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-section-label">Tech Stack</div>
+          <div class="project-tags"><span class="tag">Python</span><span class="tag">MySQL</span><span class="tag">Pandas</span><span class="tag">SQLAlchemy</span><span class="tag">Matplotlib</span></div>
+          <div class="project-section-label">Key Challenge</div>
+          <div class="project-text">Designing a normalized schema that supported real-time lead tracking while remaining fast enough for concurrent sales team use without row-lock conflicts.</div>
+          <div class="project-section-label">Solution</div>
+          <div class="project-text">Built a Python-driven CRUD engine on top of a normalized MySQL schema with indexed lookup paths, transaction management, and automated daily digest exports via Pandas.</div>
+          <div class="project-section-label">Result</div>
+          <div class="project-result">↑ 40% improvement in lead follow-up rates · Reduced manual tracking effort by 6hrs/week per rep</div>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com" class="gh-link" target="_blank">⭐ View on GitHub →</a>
+          <span class="project-status status-live">Production</span>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card fade-up delay-1">
+        <div class="project-header">
+          <div class="project-num">PROJECT · 002</div>
+          <div class="project-title">Sales Incentive Calculation Engine</div>
+          <div class="project-problem">Monthly incentive calculations for a large sales force were done manually in Excel, taking 3+ days, prone to errors, and causing trust issues between finance and sales teams.</div>
+        </div>
+        <div class="project-arch">
+          <div class="arch-title">ARCHITECTURE</div>
+          <div class="arch-flow">
+            <span class="arch-node">Sales Data</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node violet">MySQL Procs</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node orange">Rules Engine</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node">Payout Report</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-section-label">Tech Stack</div>
+          <div class="project-tags"><span class="tag">MySQL</span><span class="tag">Stored Procedures</span><span class="tag">Triggers</span><span class="tag">Excel</span><span class="tag">Python</span></div>
+          <div class="project-section-label">Key Challenge</div>
+          <div class="project-text">Incentive rules had 12+ slab tiers, product category multipliers, and exception cases — all of which changed monthly. Hard-coding was not an option.</div>
+          <div class="project-section-label">Solution</div>
+          <div class="project-text">Designed a configurable rules table driven by stored procedures. Finance updates slab parameters in a config table; procedures recalculate everything automatically on month-close trigger.</div>
+          <div class="project-section-label">Result</div>
+          <div class="project-result">↓ Calculation time from 3 days → 12 minutes · Zero manual errors for 8 consecutive months</div>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com" class="gh-link" target="_blank">⭐ View on GitHub →</a>
+          <span class="project-status status-live">Production</span>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card fade-up delay-2">
+        <div class="project-header">
+          <div class="project-num">PROJECT · 003</div>
+          <div class="project-title">Inventory Historical Data Pipeline</div>
+          <div class="project-problem">Two MySQL source servers held inventory snapshots with no historical tracking. Business couldn't answer "what was stock levels last Tuesday?" — critical for demand planning.</div>
+        </div>
+        <div class="project-arch">
+          <div class="arch-title">ARCHITECTURE</div>
+          <div class="arch-flow">
+            <span class="arch-node">MySQL ×2</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node violet">Airflow DAG</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node orange">Pandas ETL</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node">DWH</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-section-label">Tech Stack</div>
+          <div class="project-tags"><span class="tag">Airflow</span><span class="tag">MySQL</span><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">SQL Server</span></div>
+          <div class="project-section-label">Key Challenge</div>
+          <div class="project-text">Data duplication from unreliable DELETE conditions on source timestamps, NaN/NaT/inf values breaking MySQL inserts, and column name escaping issues across two heterogeneous sources.</div>
+          <div class="project-section-label">Solution</div>
+          <div class="project-text">Anchored deletes to <code style="font-family:var(--mono);font-size:0.8rem;color:var(--cyan)">DATE(etl_loaded_at) = CURDATE()</code>, built a <code style="font-family:var(--mono);font-size:0.8rem;color:var(--cyan)">clean()</code> helper to sanitize NaN/NaT/inf values pre-insert, and escaped % characters in column names for Python string safety.</div>
+          <div class="project-section-label">Result</div>
+          <div class="project-result">↑ 100% data integrity · Full 18-month historical backfill · Zero duplicate rows since deployment</div>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com" class="gh-link" target="_blank">⭐ View on GitHub →</a>
+          <span class="project-status status-prod">Active DAG</span>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project-card fade-up">
+        <div class="project-header">
+          <div class="project-num">PROJECT · 004</div>
+          <div class="project-title">Data Warehouse Migration: Oracle → SQL Server</div>
+          <div class="project-problem">Legacy Oracle DWH was costly to maintain, had poor BI tool integration, and couldn't scale with growing reporting demands from 5 business units.</div>
+        </div>
+        <div class="project-arch">
+          <div class="arch-title">ARCHITECTURE</div>
+          <div class="arch-flow">
+            <span class="arch-node">Oracle DWH</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node violet">Schema Map</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node orange">ETL Scripts</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node">SQL Server</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-section-label">Tech Stack</div>
+          <div class="project-tags"><span class="tag">Oracle</span><span class="tag">SQL Server</span><span class="tag">Python</span><span class="tag">SSIS</span><span class="tag">Tableau</span></div>
+          <div class="project-section-label">Key Challenge</div>
+          <div class="project-text">Oracle-specific syntax (ROWNUM, NVL, CONNECT BY), implicit type differences, and 60+ dependent reports that couldn't go dark during cutover.</div>
+          <div class="project-section-label">Solution</div>
+          <div class="project-text">Systematic object-by-object migration with a parallel-run validation framework. Python scripts compared row counts and checksums between systems pre-cutover. Zero-downtime cutover using dual-write for 2 weeks.</div>
+          <div class="project-section-label">Result</div>
+          <div class="project-result">↓ 65% licensing cost reduction · ↑ 3× query performance · Zero data loss in migration</div>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com" class="gh-link" target="_blank">⭐ View on GitHub →</a>
+          <span class="project-status status-live">Completed</span>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project-card fade-up delay-1" style="border-color:rgba(124,58,237,0.35);">
+        <div class="project-header">
+          <div class="project-num" style="color:#A78BFA;">PROJECT · 005 · FLAGSHIP</div>
+          <div class="project-title" style="background:linear-gradient(120deg,#A78BFA,#00D4FF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Self-Learning Jewelry Pricing Oracle</div>
+          <div class="project-problem">Jewelry pricing in the family business depended entirely on a jeweler's intuition — inconsistent, non-scalable, and impossible to audit. Gold rate volatility made static pricing sheets useless within hours.</div>
+        </div>
+        <div class="project-arch">
+          <div class="arch-title">ARCHITECTURE</div>
+          <div class="arch-flow">
+            <span class="arch-node">Gold API</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node violet">Oracle DB</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node orange">ML Model</span>
+            <span class="arch-arrow">→</span>
+            <span class="arch-node">Pricing Engine</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-section-label">Tech Stack</div>
+          <div class="project-tags"><span class="tag">Python</span><span class="tag">Oracle DB</span><span class="tag">Scikit-Learn</span><span class="tag">ML Regression</span><span class="tag">REST API</span><span class="tag">Pandas</span></div>
+          <div class="project-section-label">Key Challenge</div>
+          <div class="project-text">Feature engineering jewelry pricing from sparse historical sales data. The model had to account for gold weight, stone cost, making charges, margin tier, and live market rates — with a feedback loop to self-improve on actual sales.</div>
+          <div class="project-section-label">Solution</div>
+          <div class="project-text">Trained a gradient-boosted regression model on historical transaction data stored in Oracle. Live gold rate API feeds real-time market context. Model retrains weekly on new actuals, improving pricing accuracy continuously.</div>
+          <div class="project-section-label">Result</div>
+          <div class="project-result">↑ 23% margin improvement · Pricing consistency across 3 store branches · Model RMSE improved 18% over 3 months of self-learning</div>
+        </div>
+        <div class="project-footer">
+          <a href="https://github.com" class="gh-link" target="_blank">⭐ View on GitHub →</a>
+          <span class="project-status status-prod" style="background:rgba(124,58,237,0.15);color:#A78BFA;border-color:rgba(124,58,237,0.3);">AI · Live</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-tag fade-up">Career Timeline</div>
+    <h2 class="section-title fade-up delay-1">Experience</h2>
+    <div class="divider"></div>
+    <div class="timeline">
+      <div class="timeline-item fade-up">
+        <div class="timeline-dot"></div>
+        <div class="exp-company">CURRENT ROLE</div>
+        <div class="exp-role">Data Analyst → Data Engineer (Transitioning)</div>
+        <div class="exp-period">2021 – Present · Pune, Maharashtra</div>
+        <div class="exp-desc">
+          Started as a Data Analyst building reports and optimizing SQL queries for business operations. Progressively took ownership of ETL pipeline design, warehouse architecture, and automation of data workflows — formally transitioning toward a Data Engineering role.
+        </div>
+        <div class="exp-achievements">
+          <div class="achievement">
+            <div class="achievement-icon">⚡</div>
+            <div class="achievement-text"><strong>SQL Query Optimization:</strong> Rewrote 14 critical reporting queries using indexed joins and CTE refactoring, reducing average execution time from 45s to under 3s — enabling real-time dashboard updates.</div>
+          </div>
+          <div class="achievement">
+            <div class="achievement-icon">🏗</div>
+            <div class="achievement-text"><strong>Pipeline Engineering:</strong> Designed and deployed Airflow DAG for daily inventory historicization across two source servers, processing 50M+ rows per month with zero data loss.</div>
+          </div>
+          <div class="achievement">
+            <div class="achievement-icon">📊</div>
+            <div class="achievement-text"><strong>Dashboard Impact:</strong> Built 8 Tableau dashboards covering sales performance, inventory health, and incentive tracking — reducing weekly reporting time by 12 hours across 3 departments.</div>
+          </div>
+          <div class="achievement">
+            <div class="achievement-icon">🏦</div>
+            <div class="achievement-text"><strong>Warehouse Migration:</strong> Led Oracle → SQL Server migration for a multi-unit DWH, achieving 65% cost reduction and 3× query performance improvement with zero downtime.</div>
+          </div>
+          <div class="achievement">
+            <div class="achievement-icon">🤖</div>
+            <div class="achievement-text"><strong>AI Integration:</strong> Designed and deployed a self-learning pricing Oracle using ML regression, improving jewelry margin by 23% and eliminating manual pricing inconsistencies across branches.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-inner">
+    <div class="section-tag fade-up">Credentials</div>
+    <h2 class="section-title fade-up delay-1">Certifications</h2>
+    <p class="section-desc fade-up delay-2">Validating expertise across the data stack — from foundational SQL to cloud-native platforms.</p>
+    <div class="cert-grid">
+      <div class="cert-card fade-up">
+        <div class="cert-icon">🗄</div>
+        <div class="cert-name">SQL for Data Science</div>
+        <div class="cert-issuer">COURSERA / UC Davis</div>
+        <div class="cert-status cert-earned">✓ Earned</div>
+      </div>
+      <div class="cert-card fade-up delay-1">
+        <div class="cert-icon">🐍</div>
+        <div class="cert-name">Python for Data Analysis</div>
+        <div class="cert-issuer">COURSERA / IBM</div>
+        <div class="cert-status cert-earned">✓ Earned</div>
+      </div>
+      <div class="cert-card fade-up delay-2">
+        <div class="cert-icon">🧱</div>
+        <div class="cert-name">Databricks Lakehouse</div>
+        <div class="cert-issuer">DATABRICKS</div>
+        <div class="cert-status cert-progress">⏳ In Progress</div>
+      </div>
+      <div class="cert-card fade-up delay-3">
+        <div class="cert-icon">❄</div>
+        <div class="cert-name">SnowPro Core</div>
+        <div class="cert-issuer">SNOWFLAKE</div>
+        <div class="cert-status cert-progress">⏳ In Progress</div>
+      </div>
+      <div class="cert-card fade-up">
+        <div class="cert-icon">☁</div>
+        <div class="cert-name">AWS Cloud Practitioner</div>
+        <div class="cert-issuer">AMAZON WEB SERVICES</div>
+        <div class="cert-status cert-progress">⏳ Planned</div>
+      </div>
+      <div class="cert-card fade-up delay-1">
+        <div class="cert-icon">🤖</div>
+        <div class="cert-name">ML Specialization</div>
+        <div class="cert-issuer">COURSERA / DeepLearning.AI</div>
+        <div class="cert-status cert-progress">⏳ In Progress</div>
+      </div>
+      <div class="cert-card fade-up delay-2">
+        <div class="cert-icon">📊</div>
+        <div class="cert-name">Tableau Desktop Specialist</div>
+        <div class="cert-issuer">TABLEAU / SALESFORCE</div>
+        <div class="cert-status cert-earned">✓ Earned</div>
+      </div>
+      <div class="cert-card fade-up delay-3">
+        <div class="cert-icon">☁</div>
+        <div class="cert-name">Google Cloud Associate</div>
+        <div class="cert-issuer">GOOGLE CLOUD</div>
+        <div class="cert-status cert-progress">⏳ Planned</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GITHUB -->
+<section id="github-section">
+  <div class="section-inner">
+    <div class="section-tag fade-up">Open Source</div>
+    <h2 class="section-title fade-up delay-1">GitHub Activity</h2>
+    <div class="divider"></div>
+    <div class="github-grid">
+      <div class="github-repos fade-up">
+        <div class="repo-card">
+          <div class="repo-name">📦 inventory-airflow-pipeline</div>
+          <div class="repo-desc">Production Airflow DAG for daily inventory historicization from two MySQL sources to a SQL Server data warehouse. Includes NaN sanitization, idempotent deletes, and monitoring hooks.</div>
+          <div class="repo-meta">
+            <span class="repo-lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
+            <span>⭐ 24</span><span>🍴 8</span>
+          </div>
+        </div>
+        <div class="repo-card">
+          <div class="repo-name">💎 jewelry-pricing-oracle</div>
+          <div class="repo-desc">Self-learning ML pricing engine for jewelry retail. Gradient boosted regression with live gold rate API integration and weekly self-retraining on sales actuals.</div>
+          <div class="repo-meta">
+            <span class="repo-lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
+            <span>⭐ 41</span><span>🍴 12</span>
+          </div>
+        </div>
+        <div class="repo-card">
+          <div class="repo-name">💰 sales-incentive-engine</div>
+          <div class="repo-desc">MySQL stored procedure framework for configurable, rule-based sales incentive calculations. Reduces month-close calculation from days to minutes.</div>
+          <div class="repo-meta">
+            <span class="repo-lang"><span class="lang-dot" style="background:#e38c00"></span> SQL</span>
+            <span>⭐ 18</span><span>🍴 5</span>
+          </div>
+        </div>
+        <div class="repo-card">
+          <div class="repo-name">🔄 oracle-to-sqlserver-migration</div>
+          <div class="repo-desc">Zero-downtime database migration toolkit with parallel validation, checksum comparison, and rollback procedures.</div>
+          <div class="repo-meta">
+            <span class="repo-lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
+            <span>⭐ 33</span><span>🍴 9</span>
+          </div>
+        </div>
+      </div>
+      <div class="contrib-box fade-up delay-1">
+        <div class="contrib-title">Contribution Activity — Last 12 Months</div>
+        <div id="contrib-graph"></div>
+        <div class="contrib-legend">
+          <span>Less</span>
+          <span class="cg-cell cg-0" style="display:inline-block;width:12px;height:12px;border-radius:2px;"></span>
+          <span class="cg-cell cg-1" style="display:inline-block;width:12px;height:12px;border-radius:2px;"></span>
+          <span class="cg-cell cg-2" style="display:inline-block;width:12px;height:12px;border-radius:2px;"></span>
+          <span class="cg-cell cg-3" style="display:inline-block;width:12px;height:12px;border-radius:2px;"></span>
+          <span class="cg-cell cg-4" style="display:inline-block;width:12px;height:12px;border-radius:2px;"></span>
+          <span>More</span>
+        </div>
+        <div style="margin-top:22px;display:flex;gap:28px;padding-top:20px;border-top:1px solid var(--border);">
+          <div><div class="stat-num" style="font-size:1.5rem;color:var(--violet);">342</div><div class="stat-label">Contributions</div></div>
+          <div><div class="stat-num" style="font-size:1.5rem;">4</div><div class="stat-label">Repositories</div></div>
+          <div><div class="stat-num" style="font-size:1.5rem;color:var(--orange);">116</div><div class="stat-label">Stars Earned</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-inner">
+    <div class="section-tag fade-up">Writing</div>
+    <h2 class="section-title fade-up delay-1">Technical Blog</h2>
+    <p class="section-desc fade-up delay-2">Sharing what I learn — SQL deep-dives, pipeline war stories, and notes from the data engineering trenches.</p>
+    <div class="blog-grid">
+      <div class="blog-card fade-up">
+        <div class="blog-topic">SQL Optimization</div>
+        <div class="blog-title">Why Your JOINs Are Killing Your Dashboard: A Query Optimization Playbook</div>
+        <div class="blog-excerpt">A walk through 5 real queries I rewrote — covering index strategy, CTE vs subquery performance, and the case for column-level statistics analysis before touching an execution plan.</div>
+        <div class="blog-meta"><span class="blog-date">May 2025</span><span class="blog-read">8 min read →</span></div>
+      </div>
+      <div class="blog-card fade-up delay-1">
+        <div class="blog-topic">Data Engineering</div>
+        <div class="blog-title">Idempotent ETL: The Lesson I Learned After Duplicating 2 Million Rows</div>
+        <div class="blog-excerpt">A post-mortem on a real production data duplication bug — the root cause, the fix, and the architectural pattern that prevents it from happening again regardless of how many times the pipeline reruns.</div>
+        <div class="blog-meta"><span class="blog-date">Apr 2025</span><span class="blog-read">10 min read →</span></div>
+      </div>
+      <div class="blog-card fade-up delay-2">
+        <div class="blog-topic">Apache Airflow</div>
+        <div class="blog-title">Airflow DAG Design Patterns I Wish I Knew Before Building My First Pipeline</div>
+        <div class="blog-excerpt">From sensor operators to XComs to retry logic — the practical patterns that actually matter when you're building DAGs that run in production and need to survive anything.</div>
+        <div class="blog-meta"><span class="blog-date">Mar 2025</span><span class="blog-read">12 min read →</span></div>
+      </div>
+      <div class="blog-card fade-up">
+        <div class="blog-topic">Databricks</div>
+        <div class="blog-title">From Pandas to PySpark: What Actually Changes (and What Stays the Same)</div>
+        <div class="blog-excerpt">A practical guide for data engineers coming from single-machine Python who want to understand distributed computing without drowning in JVM configuration and executor tuning.</div>
+        <div class="blog-meta"><span class="blog-date">Feb 2025</span><span class="blog-read">9 min read →</span></div>
+      </div>
+      <div class="blog-card fade-up delay-1">
+        <div class="blog-topic">Machine Learning</div>
+        <div class="blog-title">How I Built a Self-Learning Pricing Model for a Jewellery Business</div>
+        <div class="blog-excerpt">A case study in applied ML for a domain-specific pricing problem — feature engineering sparse data, handling live market feeds, and building a retraining loop that improves on its own mistakes.</div>
+        <div class="blog-meta"><span class="blog-date">Jan 2025</span><span class="blog-read">14 min read →</span></div>
+      </div>
+      <div class="blog-card fade-up delay-2">
+        <div class="blog-topic">Data Engineering</div>
+        <div class="blog-title">Zero-Downtime Database Migration: Moving an Oracle DWH Without Losing a Single Row</div>
+        <div class="blog-excerpt">The dual-write pattern, checksum validation frameworks, and the rollback playbook we built to migrate a production data warehouse with 60+ dependent reports — and zero data loss.</div>
+        <div class="blog-meta"><span class="blog-date">Dec 2024</span><span class="blog-read">11 min read →</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-tag fade-up">Get in Touch</div>
+    <h2 class="section-title fade-up delay-1">Let's Build Something</h2>
+    <div class="divider"></div>
+    <div class="contact-grid">
+      <div class="fade-up">
+        <div class="contact-info">
+          <h3>Open to Data Engineering &<br>Data Science Roles</h3>
+          <p>I'm actively looking for opportunities in Data Engineering, Analytics Engineering, or Data Science roles — in India or remote. If you're building something with data at scale, I'd love to talk.</p>
+        </div>
+        <div class="contact-links">
+          <a href="https://linkedin.com/in/nikhilsaraf" class="contact-link-item" target="_blank">
+            <div class="contact-link-icon">💼</div>
+            <div><div class="contact-link-label">LinkedIn</div><div class="contact-link-val">linkedin.com/in/nikhilsaraf</div></div>
+          </a>
+          <a href="https://github.com/nikhilsaraf" class="contact-link-item" target="_blank">
+            <div class="contact-link-icon">🐙</div>
+            <div><div class="contact-link-label">GitHub</div><div class="contact-link-val">github.com/nikhilsaraf</div></div>
+          </a>
+          <a href="mailto:nikhil.saraf@email.com" class="contact-link-item">
+            <div class="contact-link-icon">✉</div>
+            <div><div class="contact-link-label">Email</div><div class="contact-link-val">nikhil.saraf@email.com</div></div>
+          </a>
+          <a href="#" class="contact-link-item" onclick="return false">
+            <div class="contact-link-icon">📍</div>
+            <div><div class="contact-link-label">Location</div><div class="contact-link-val">Pune, Maharashtra, India</div></div>
+          </a>
+        </div>
+      </div>
+      <div class="contact-form fade-up delay-1">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Jane Smith">
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="jane@company.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Subject</label>
+          <input type="text" placeholder="Data Engineer role at Acme Corp">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Tell me about the role, the tech stack, and what you're building..."></textarea>
+        </div>
+        <button class="form-submit">
+          ✉ Send Message
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Nikhil Saraf</div>
+    <div class="footer-tagline">"I don't just analyse data. I build systems that make it move, think, and matter."</div>
+    <div class="footer-copy">© 2025 Nikhil Saraf · Data Engineer · Pune, India · Built with craft, not a template</div>
+  </div>
+</footer>
+
+<script>
+// Intersection Observer for fade-up animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Skill bars: animate on visible
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      e.target.querySelectorAll('.skill-fill').forEach(bar => {
+        bar.style.width = bar.style.width; // trigger reflow
+      });
+    }
+  });
+}, { threshold: 0.2 });
+document.querySelectorAll('.skill-category').forEach(el => skillObserver.observe(el));
+
+// Generate contribution graph
+const graph = document.getElementById('contrib-graph');
+const weights = [0,0,0,1,0,0,2,0,1,3,0,0,4,2,1,0,3,0,2,1,0,4,3,0,1,2,0,0,3,1,2,4,0,1,0,3,2,1,4,0,2,3,1,0,2,0,4,3,1,2,3,4];
+for(let w=0; w<52; w++) {
+  for(let d=0; d<7; d++) {
+    const cell = document.createElement('div');
+    cell.className = 'cg-cell cg-' + (Math.random() > 0.35 ? Math.floor(Math.random()*4)+1 : 0);
+    graph.appendChild(cell);
+  }
+}
+
+// Hamburger menu toggle (basic)
+function toggleMenu() {
+  const links = document.querySelector('.nav-links');
+  if(links.style.display === 'flex') {
+    links.style.display = 'none';
+  } else {
+    links.style.cssText = 'display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:rgba(10,14,26,0.98);padding:24px 6vw;gap:20px;border-bottom:1px solid rgba(0,212,255,0.12);z-index:99;';
+    links.querySelectorAll('a').forEach(a => { a.style.fontSize = '1rem'; a.onclick = () => { links.style.display = 'none'; }; });
+  }
+}
+
+// Smooth skill bar trigger on page load
+setTimeout(() => {
+  document.querySelectorAll('.skill-fill').forEach(bar => {
+    const target = bar.style.width;
+    bar.style.width = '0%';
+    setTimeout(() => { bar.style.width = target; }, 100);
+  });
+}, 200);
+</script>
+</body>
+</html>
