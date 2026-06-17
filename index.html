@@ -1,34 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nikhil Patil | Data Analyst & SQL Developer | Pune, India</title>
-<meta name="description" content="Nikhil Patil — Data Analyst and SQL Developer with 2.7 years of experience in Pune, India. Expert in SQL, PL/SQL, Python, Power BI, Microsoft Fabric, Apache Airflow, and ETL pipeline engineering.">
+<meta name="description" content="Nikhil Patil — Data Analyst and SQL Developer with 2.7 years of experience in Pune, India. Expert in SQL, PL/SQL, Python, Power BI, Microsoft Fabric, and Apache Airflow.">
 <meta name="keywords" content="Data Analyst, SQL Developer, PL/SQL, Power BI, Microsoft Fabric, Python, Airflow, ETL, Data Engineering, Pune, India, Nikhil Patil">
-<meta property="og:title" content="Nikhil Patil | Data Analyst & SQL Developer">
-<meta property="og:description" content="Transforming complex data into actionable insights — SQL, Python, Power BI, and production ETL pipelines.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #0A0E1A;
-  --bg-card: #111827;
-  --bg-card2: #1A1F35;
-  --cyan: #00D4FF;
-  --violet: #7C3AED;
-  --orange: #FF6B35;
-  --text: #E2E8F0;
-  --text-muted: #8892A4;
-  --border: rgba(0,212,255,0.12);
-  --border2: rgba(124,58,237,0.18);
-  --mono: 'JetBrains Mono', monospace;
-  --display: 'Space Grotesk', sans-serif;
-  --body: 'Inter', sans-serif;
-  --radius: 14px;
-  --radius-sm: 8px;
+  --bg: #0A0E1A; --bg-card: #111827; --bg-card2: #1A1F35;
+  --cyan: #00D4FF; --violet: #7C3AED; --orange: #FF6B35;
+  --text: #E2E8F0; --text-muted: #8892A4;
+  --border: rgba(0,212,255,0.12); --border2: rgba(124,58,237,0.18);
+  --mono: 'JetBrains Mono', monospace; --display: 'Space Grotesk', sans-serif; --body: 'Inter', sans-serif;
+  --radius: 14px; --radius-sm: 8px;
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -36,19 +24,15 @@ body { background: var(--bg); color: var(--text); font-family: var(--body); font
 ::selection { background: rgba(0,212,255,0.25); }
 a { color: var(--cyan); text-decoration: none; }
 a:hover { text-decoration: underline; }
-
-/* NAV */
 nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 6vw; background: rgba(10,14,26,0.85); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border); }
 .nav-logo { font-family: var(--display); font-weight: 700; font-size: 1.15rem; background: linear-gradient(120deg, var(--cyan), var(--violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .nav-links { display: flex; gap: 28px; list-style: none; }
-.nav-links a { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em; color: var(--text-muted); transition: color 0.2s; text-decoration: none; text-transform: uppercase; }
+.nav-links a { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.04em; color: var(--text-muted); text-decoration: none; text-transform: uppercase; }
 .nav-links a:hover { color: var(--cyan); }
-.nav-cta { background: var(--cyan); color: #000; font-weight: 700; font-size: 0.82rem; padding: 8px 18px; border-radius: 50px; letter-spacing: 0.04em; text-transform: uppercase; transition: opacity 0.2s; cursor: pointer; }
+.nav-cta { background: var(--cyan); color: #000; font-weight: 700; font-size: 0.82rem; padding: 8px 18px; border-radius: 50px; letter-spacing: 0.04em; text-transform: uppercase; cursor: pointer; }
 .nav-cta:hover { opacity: 0.85; text-decoration: none; color: #000; }
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--text); border-radius: 2px; }
-
-/* HERO */
 #hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 6vw 80px; position: relative; overflow: hidden; }
 .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; width: 100%; max-width: 1280px; margin: 0 auto; }
 .hero-eyebrow { font-family: var(--mono); font-size: 0.78rem; color: var(--cyan); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 18px; display: flex; align-items: center; gap: 10px; }
@@ -59,20 +43,18 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 .hero-subtitle { font-size: 1.05rem; color: var(--text-muted); max-width: 520px; margin-bottom: 36px; line-height: 1.8; }
 .hero-subtitle strong { color: var(--text); font-weight: 500; }
 .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
-.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--cyan), #0094FF); color: #000; font-weight: 700; font-size: 0.9rem; padding: 13px 26px; border-radius: 50px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; border: none; text-decoration: none; letter-spacing: 0.02em; }
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--cyan), #0094FF); color: #000; font-weight: 700; font-size: 0.9rem; padding: 13px 26px; border-radius: 50px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; border: none; text-decoration: none; }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,212,255,0.35); text-decoration: none; color: #000; }
 .btn-outline { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--border); color: var(--text); font-weight: 600; font-size: 0.9rem; padding: 13px 26px; border-radius: 50px; cursor: pointer; transition: border-color 0.2s, background 0.2s; text-decoration: none; background: transparent; }
 .btn-outline:hover { border-color: var(--cyan); background: rgba(0,212,255,0.06); color: var(--cyan); text-decoration: none; }
 .hero-stats { display: flex; gap: 36px; margin-top: 44px; padding-top: 36px; border-top: 1px solid var(--border); }
 .stat-num { font-family: var(--display); font-size: 1.9rem; font-weight: 700; color: var(--cyan); line-height: 1; }
-.stat-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; letter-spacing: 0.04em; }
+.stat-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
 .hero-visual { position: relative; display: flex; align-items: center; justify-content: center; }
 #pipeline-canvas { width: 100%; max-width: 520px; border-radius: 20px; }
 .hero-badge { position: absolute; bottom: -16px; right: 0; background: var(--bg-card2); border: 1px solid var(--border2); border-radius: 12px; padding: 12px 18px; font-family: var(--mono); font-size: 0.75rem; color: var(--cyan); display: flex; align-items: center; gap: 8px; }
 .pulse { width: 8px; height: 8px; border-radius: 50%; background: #22C55E; animation: pulse 1.8s ease-in-out infinite; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.4)} }
-
-/* SECTION COMMON */
 section { padding: 100px 6vw; }
 .section-inner { max-width: 1280px; margin: 0 auto; }
 .section-tag { font-family: var(--mono); font-size: 0.75rem; color: var(--cyan); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
@@ -80,23 +62,18 @@ section { padding: 100px 6vw; }
 .section-title { font-family: var(--display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; line-height: 1.15; }
 .section-desc { color: var(--text-muted); max-width: 580px; font-size: 1rem; margin-bottom: 56px; }
 .divider { width: 48px; height: 3px; background: linear-gradient(90deg, var(--cyan), var(--violet)); border-radius: 2px; margin: 16px 0 56px; }
-
-/* ABOUT */
 #about { background: var(--bg-card); }
 .about-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 70px; align-items: start; }
 .about-avatar-wrap { display: flex; flex-direction: column; align-items: center; gap: 20px; }
 .about-avatar { width: 220px; height: 220px; border-radius: 50%; background: linear-gradient(135deg, var(--violet), var(--cyan)); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 4rem; font-weight: 700; color: #fff; position: relative; }
-.about-avatar::after { content: ''; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid transparent; background: linear-gradient(135deg,var(--cyan),var(--violet)) border-box; -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0); -webkit-mask-composite: destination-out; mask-composite: exclude; }
-.about-location { font-family: var(--mono); font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+.about-location { font-family: var(--mono); font-size: 0.8rem; color: var(--text-muted); }
 .about-text p { color: var(--text-muted); line-height: 1.85; margin-bottom: 18px; }
 .about-text p strong { color: var(--text); font-weight: 500; }
 .objective-card { background: var(--bg-card2); border: 1px solid var(--border2); border-radius: var(--radius); padding: 24px 28px; margin-top: 28px; }
 .objective-card h4 { font-family: var(--display); font-weight: 600; color: var(--violet); margin-bottom: 10px; font-size: 0.95rem; }
 .objective-card p { color: var(--text-muted); font-size: 0.92rem; margin: 0; }
 .strengths { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-.strength-pill { background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); color: var(--cyan); font-family: var(--mono); font-size: 0.75rem; padding: 6px 14px; border-radius: 50px; letter-spacing: 0.04em; }
-
-/* SKILLS */
+.strength-pill { background: rgba(0,212,255,0.08); border: 1px solid rgba(0,212,255,0.2); color: var(--cyan); font-family: var(--mono); font-size: 0.75rem; padding: 6px 14px; border-radius: 50px; }
 #skills { background: var(--bg); }
 .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
 .skill-category { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
@@ -111,8 +88,6 @@ section { padding: 100px 6vw; }
 .fill-cyan { background: linear-gradient(90deg, var(--cyan), #0094FF); }
 .fill-violet { background: linear-gradient(90deg, var(--violet), #A78BFA); }
 .fill-orange { background: linear-gradient(90deg, var(--orange), #FFD93D); }
-
-/* PROJECTS */
 #projects { background: var(--bg-card); }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; }
 .project-card { background: var(--bg-card2); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s; }
@@ -135,13 +110,11 @@ section { padding: 100px 6vw; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .tag { font-family: var(--mono); font-size: 0.7rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--text-muted); padding: 4px 10px; border-radius: 4px; }
 .project-footer { display: flex; align-items: center; justify-content: space-between; padding: 16px 28px; border-top: 1px solid var(--border); margin-top: 4px; }
-.gh-link { display: inline-flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 0.78rem; color: var(--cyan); transition: gap 0.2s; }
-.gh-link:hover { gap: 11px; text-decoration: none; }
+.gh-link { display: inline-flex; align-items: center; gap: 7px; font-family: var(--mono); font-size: 0.78rem; color: var(--cyan); }
+.gh-link:hover { text-decoration: none; }
 .project-status { font-family: var(--mono); font-size: 0.7rem; padding: 4px 10px; border-radius: 50px; }
 .status-live { background: rgba(34,197,94,0.12); color: #22C55E; border: 1px solid rgba(34,197,94,0.25); }
 .status-prod { background: rgba(0,212,255,0.1); color: var(--cyan); border: 1px solid rgba(0,212,255,0.2); }
-
-/* EXPERIENCE */
 #experience { background: var(--bg); }
 .timeline { position: relative; padding-left: 36px; }
 .timeline::before { content:''; position:absolute; left:0; top:8px; bottom:0; width:2px; background:linear-gradient(to bottom,var(--cyan),var(--violet),transparent); }
@@ -159,20 +132,16 @@ section { padding: 100px 6vw; }
 .achievement-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
 .achievement-text { font-size: 0.87rem; color: var(--text-muted); line-height: 1.6; }
 .achievement-text strong { color: var(--text); font-weight: 600; }
-
-/* CERTIFICATIONS */
 #certifications { background: var(--bg-card); }
 .cert-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 18px; }
-.cert-card { background: var(--bg-card2); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 20px; text-align: center; transition: border-color 0.2s, transform 0.2s; position: relative; overflow: hidden; }
+.cert-card { background: var(--bg-card2); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px 20px; text-align: center; transition: border-color 0.2s, transform 0.2s; }
 .cert-card:hover { border-color: var(--cyan); transform: translateY(-3px); }
 .cert-icon { font-size: 2.2rem; margin-bottom: 12px; }
 .cert-name { font-family: var(--display); font-weight: 700; font-size: 0.88rem; margin-bottom: 4px; }
-.cert-issuer { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); letter-spacing: 0.06em; }
+.cert-issuer { font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); }
 .cert-status { display: inline-block; margin-top: 12px; font-family: var(--mono); font-size: 0.68rem; padding: 3px 10px; border-radius: 50px; }
 .cert-earned { background: rgba(34,197,94,0.1); color: #22C55E; border: 1px solid rgba(34,197,94,0.2); }
 .cert-progress { background: rgba(255,107,53,0.1); color: var(--orange); border: 1px solid rgba(255,107,53,0.2); }
-
-/* GITHUB */
 #github-section { background: var(--bg); }
 .github-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
 .github-repos { display: flex; flex-direction: column; gap: 16px; }
@@ -193,8 +162,6 @@ section { padding: 100px 6vw; }
 .cg-3 { background: rgba(0,212,255,0.75); }
 .cg-4 { background: var(--cyan); }
 .contrib-legend { display: flex; align-items: center; gap: 8px; margin-top: 14px; font-family: var(--mono); font-size: 0.7rem; color: var(--text-muted); }
-
-/* BLOG */
 #blog { background: var(--bg-card); }
 .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 22px; }
 .blog-card { background: var(--bg-card2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: flex; flex-direction: column; transition: border-color 0.25s, transform 0.2s; }
@@ -205,8 +172,6 @@ section { padding: 100px 6vw; }
 .blog-meta { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
 .blog-date { font-family: var(--mono); font-size: 0.72rem; color: var(--text-muted); }
 .blog-read { font-size: 0.8rem; color: var(--cyan); font-weight: 500; }
-
-/* CONTACT */
 #contact { background: var(--bg); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
 .contact-info h3 { font-family: var(--display); font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; }
@@ -226,23 +191,17 @@ section { padding: 100px 6vw; }
 .form-group textarea { resize: vertical; min-height: 110px; }
 .form-submit { width: 100%; background: linear-gradient(135deg, var(--cyan), #0094FF); color: #000; font-weight: 700; font-size: 0.92rem; padding: 14px; border-radius: var(--radius-sm); border: none; cursor: pointer; transition: opacity 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
 .form-submit:hover { opacity: 0.88; }
-
-/* FOOTER */
 footer { background: var(--bg-card); border-top: 1px solid var(--border); padding: 36px 6vw; text-align: center; }
 .footer-inner { max-width: 1280px; margin: 0 auto; }
 .footer-logo { font-family: var(--display); font-weight: 700; font-size: 1.1rem; background: linear-gradient(120deg,var(--cyan),var(--violet)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; margin-bottom: 10px; }
 .footer-copy { font-family: var(--mono); font-size: 0.75rem; color: var(--text-muted); }
 .footer-tagline { font-style: italic; color: var(--text-muted); font-size: 0.85rem; margin-bottom: 8px; }
-
-/* ANIMATIONS */
 .fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
 .fade-up.visible { opacity: 1; transform: translateY(0); }
 .delay-1 { transition-delay: 0.1s; }
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
 .delay-4 { transition-delay: 0.4s; }
-
-/* MOBILE */
 @media (max-width: 900px) {
   .hero-grid, .about-grid, .github-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-visual { display: none; }
@@ -262,7 +221,6 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <div class="nav-logo">NP.dev</div>
   <ul class="nav-links">
@@ -278,64 +236,29 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
   <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- HERO -->
 <section id="hero">
   <div class="hero-grid">
     <div class="hero-content">
       <div class="hero-eyebrow fade-up">Data Analyst · SQL Developer · Pune, India</div>
-      <h1 class="hero-title fade-up delay-1">
-        From Raw Data<br>to <span class="accent-cyan">Decisions</span> &<br><span class="accent-violet">Pipelines</span>
-      </h1>
-      <p class="hero-subtitle fade-up delay-2">
-        I'm <strong>Nikhil Patil</strong> — a Data Analyst and SQL Developer with
-        <strong>2.7 years of experience</strong> turning complex, messy data into
-        clean pipelines, sharp dashboards, and business-critical insights.
-        Currently building production ETL systems with <strong>Microsoft Fabric, Airflow, and Python</strong>.
-      </p>
+      <h1 class="hero-title fade-up delay-1">From Raw Data<br>to <span class="accent-cyan">Decisions</span> &<br><span class="accent-violet">Pipelines</span></h1>
+      <p class="hero-subtitle fade-up delay-2">I'm <strong>Nikhil Patil</strong> — a Data Analyst and SQL Developer with <strong>2.7 years of experience</strong> turning complex, messy data into clean pipelines, sharp dashboards, and business-critical insights. Currently building production ETL systems with <strong>Microsoft Fabric, Airflow, and Python</strong>.</p>
       <div class="hero-actions fade-up delay-3">
-        <a href="mailto:nikhilkate0622@gmail.com" class="btn-primary">
-          ✉ Get in Touch
-        </a>
-        <a href="https://github.com/nik-patil-123" target="_blank" class="btn-outline">
-          🐙 GitHub Profile
-        </a>
+        <a href="mailto:nikhilkate0622@gmail.com" class="btn-primary">✉ Get in Touch</a>
+        <a href="https://github.com/nik-patil-123" target="_blank" class="btn-outline">🐙 GitHub Profile</a>
       </div>
       <div class="hero-stats fade-up delay-4">
-        <div>
-          <div class="stat-num">2.7</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div>
-          <div class="stat-num">5</div>
-          <div class="stat-label">Production Projects</div>
-        </div>
-        <div>
-          <div class="stat-num">30%</div>
-          <div class="stat-label">Query Performance Gain</div>
-        </div>
-        <div>
-          <div class="stat-num">10+</div>
-          <div class="stat-label">Hrs/Week Automated</div>
-        </div>
+        <div><div class="stat-num">2.7</div><div class="stat-label">Years Experience</div></div>
+        <div><div class="stat-num">5</div><div class="stat-label">Production Projects</div></div>
+        <div><div class="stat-num">30%</div><div class="stat-label">Query Perf. Gain</div></div>
+        <div><div class="stat-num">10+</div><div class="stat-label">Hrs/Week Automated</div></div>
       </div>
     </div>
     <div class="hero-visual fade-up delay-2">
       <svg id="pipeline-canvas" viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient id="gCyan" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#00D4FF" stop-opacity="0.8"/>
-            <stop offset="100%" stop-color="#0094FF" stop-opacity="0.8"/>
-          </linearGradient>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="3" result="blur"/>
-            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-          <marker id="arrowCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-            <path d="M0,0 L10,5 L0,10 Z" fill="#00D4FF"/>
-          </marker>
-          <marker id="arrowViolet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-            <path d="M0,0 L10,5 L0,10 Z" fill="#A78BFA"/>
-          </marker>
+          <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          <marker id="arrowCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#00D4FF"/></marker>
+          <marker id="arrowViolet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#A78BFA"/></marker>
         </defs>
         <rect width="520" height="360" fill="#090D19" rx="16"/>
         <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
@@ -380,17 +303,9 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
         <line x1="469" y1="145" x2="300" y2="220" stroke="#00D4FF" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.5"/>
         <line x1="200" y1="240" x2="162" y2="240" stroke="#A78BFA" stroke-width="1.5" marker-end="url(#arrowViolet)" opacity="0.7"/>
         <line x1="320" y1="240" x2="358" y2="240" stroke="#A78BFA" stroke-width="1.5" marker-end="url(#arrowCyan)" opacity="0.7"/>
-        <circle r="4" fill="#00D4FF" filter="url(#glow)">
-          <animateMotion dur="3s" repeatCount="indefinite">
-            <mpath href="#pipe1"/>
-          </animateMotion>
-        </circle>
+        <circle r="4" fill="#00D4FF" filter="url(#glow)"><animateMotion dur="3s" repeatCount="indefinite"><mpath href="#pipe1"/></animateMotion></circle>
         <path id="pipe1" d="M90,98 L148,100 L240,105 L298,108 L428,100" fill="none"/>
-        <circle r="3.5" fill="#A78BFA" filter="url(#glow)">
-          <animateMotion dur="4s" repeatCount="indefinite" begin="1s">
-            <mpath href="#pipe2"/>
-          </animateMotion>
-        </circle>
+        <circle r="3.5" fill="#A78BFA" filter="url(#glow)"><animateMotion dur="4s" repeatCount="indefinite" begin="1s"><mpath href="#pipe2"/></animateMotion></circle>
         <path id="pipe2" d="M469,145 L469,180 L260,215" fill="none"/>
         <text x="10" y="185" fill="rgba(255,255,255,0.3)" font-family="JetBrains Mono" font-size="8">INGEST</text>
         <text x="155" y="185" fill="rgba(255,255,255,0.3)" font-family="JetBrains Mono" font-size="8">TRANSFORM</text>
@@ -402,14 +317,11 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
         <circle cx="32" cy="332" r="4" fill="#22C55E"/>
         <text x="44" y="336" fill="rgba(255,255,255,0.5)" font-family="JetBrains Mono" font-size="9">Medallion pipeline active · Last run: 3m ago · 10+ hrs/week automated</text>
       </svg>
-      <div class="hero-badge">
-        <span class="pulse"></span> Pipeline Active
-      </div>
+      <div class="hero-badge"><span class="pulse"></span> Pipeline Active</div>
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
     <div class="about-grid">
@@ -451,7 +363,6 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
     <div class="section-tag fade-up">Technical Stack</div>
@@ -460,89 +371,37 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
     <div class="skills-grid">
       <div class="skill-category fade-up">
         <h4>🗄 SQL & Databases</h4>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">SQL</span><span class="skill-level">Expert · 2.7 yrs</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:95%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">PL/SQL</span><span class="skill-level">Advanced</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:85%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">SQL Server</span><span class="skill-level">Advanced</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:88%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">Oracle DB</span><span class="skill-level">Intermediate</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:75%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">MySQL</span><span class="skill-level">Intermediate</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:72%"></div></div>
-        </div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">SQL</span><span class="skill-level">Expert · 2.7 yrs</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" style="width:95%"></div></div></div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">PL/SQL</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" style="width:85%"></div></div></div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">SQL Server</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" style="width:88%"></div></div></div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">Oracle DB</span><span class="skill-level">Intermediate</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" style="width:75%"></div></div></div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">MySQL</span><span class="skill-level">Intermediate</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" style="width:72%"></div></div></div>
       </div>
       <div class="skill-category fade-up delay-1">
         <h4>🐍 Python & Data</h4>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">Python</span><span class="skill-level">Advanced</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-violet" style="width:80%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">Pandas</span><span class="skill-level">Advanced</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-violet" style="width:82%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">Data Modelling</span><span class="skill-level">Advanced</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-violet" style="width:80%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">Schema Design</span><span class="skill-level">Advanced</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-violet" style="width:78%"></div></div>
-        </div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">Python</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill fill-violet" style="width:80%"></div></div></div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">Pandas</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill fill-violet" style="width:82%"></div></div></div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">Data Modelling</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill fill-violet" style="width:80%"></div></div></div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">Schema Design</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill fill-violet" style="width:78%"></div></div></div>
       </div>
       <div class="skill-category fade-up delay-2">
         <h4>⚙ Data Engineering</h4>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">Microsoft Fabric</span><span class="skill-level">Hands-on</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-orange" style="width:75%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">Apache Airflow</span><span class="skill-level">Intermediate</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-orange" style="width:68%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">ETL Pipelines</span><span class="skill-level">Advanced</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-orange" style="width:80%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">Medallion Architecture</span><span class="skill-level">Hands-on</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-orange" style="width:72%"></div></div>
-        </div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">Microsoft Fabric</span><span class="skill-level">Hands-on</span></div><div class="skill-bar"><div class="skill-fill fill-orange" style="width:75%"></div></div></div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">Apache Airflow</span><span class="skill-level">Intermediate</span></div><div class="skill-bar"><div class="skill-fill fill-orange" style="width:68%"></div></div></div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">ETL Pipelines</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill fill-orange" style="width:80%"></div></div></div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">Medallion Architecture</span><span class="skill-level">Hands-on</span></div><div class="skill-bar"><div class="skill-fill fill-orange" style="width:72%"></div></div></div>
       </div>
       <div class="skill-category fade-up delay-3">
         <h4>📊 BI & Visualization</h4>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">Power BI</span><span class="skill-level">Advanced</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:85%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">Excel (Pivot, INDEX-MATCH)</span><span class="skill-level">Expert</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:92%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">KPI Dashboard Design</span><span class="skill-level">Advanced</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:83%"></div></div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-meta"><span class="skill-name">Microsoft Azure</span><span class="skill-level">Exposure</span></div>
-          <div class="skill-bar"><div class="skill-fill fill-cyan" style="width:50%"></div></div>
-        </div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">Power BI</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" style="width:85%"></div></div></div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">Excel (Pivot, INDEX-MATCH)</span><span class="skill-level">Expert</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" style="width:92%"></div></div></div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">KPI Dashboard Design</span><span class="skill-level">Advanced</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" style="width:83%"></div></div></div>
+        <div class="skill-item"><div class="skill-meta"><span class="skill-name">Microsoft Azure</span><span class="skill-level">Exposure</span></div><div class="skill-bar"><div class="skill-fill fill-cyan" style="width:50%"></div></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <div class="section-inner">
     <div class="section-tag fade-up">Engineering Portfolio</div>
@@ -550,7 +409,6 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
     <p class="section-desc fade-up delay-2">Real systems built for real businesses — each one solving a problem that cost time or money before it existed.</p>
     <div class="projects-grid">
 
-      <!-- Project 1 -->
       <div class="project-card fade-up">
         <div class="project-header">
           <div class="project-num">PROJECT · 001 · CHANDUKAKA SARAF</div>
@@ -560,14 +418,10 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
         <div class="project-arch">
           <div class="arch-title">ARCHITECTURE</div>
           <div class="arch-flow">
-            <span class="arch-node">Raw Sources</span>
-            <span class="arch-arrow">→</span>
-            <span class="arch-node violet">Bronze Layer</span>
-            <span class="arch-arrow">→</span>
-            <span class="arch-node violet">Silver Layer</span>
-            <span class="arch-arrow">→</span>
-            <span class="arch-node orange">Gold Layer</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-node">Raw Sources</span><span class="arch-arrow">→</span>
+            <span class="arch-node violet">Bronze Layer</span><span class="arch-arrow">→</span>
+            <span class="arch-node violet">Silver Layer</span><span class="arch-arrow">→</span>
+            <span class="arch-node orange">Gold Layer</span><span class="arch-arrow">→</span>
             <span class="arch-node">Power BI</span>
           </div>
         </div>
@@ -575,7 +429,7 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
           <div class="project-section-label">Tech Stack</div>
           <div class="project-tags"><span class="tag">Microsoft Fabric</span><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Power BI</span><span class="tag">Medallion Architecture</span></div>
           <div class="project-section-label">Key Challenge</div>
-          <div class="project-text">Designing a layered transformation architecture that handled raw data inconsistencies at ingestion while keeping Gold layer clean enough for direct BI consumption — without breaking downstream reports on schema changes.</div>
+          <div class="project-text">Designing a layered transformation architecture that handled raw data inconsistencies at ingestion while keeping the Gold layer clean enough for direct BI consumption — without breaking downstream reports on schema changes.</div>
           <div class="project-section-label">Solution</div>
           <div class="project-text">Implemented end-to-end Medallion Architecture in Microsoft Fabric — Bronze for raw ingestion, Silver for cleansed and validated records, Gold for aggregated KPI-ready tables. SQL and Python handled transformations at each layer.</div>
           <div class="project-section-label">Result</div>
@@ -587,7 +441,6 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
         </div>
       </div>
 
-      <!-- Project 2 -->
       <div class="project-card fade-up delay-1">
         <div class="project-header">
           <div class="project-num">PROJECT · 002 · CHANDUKAKA SARAF</div>
@@ -597,12 +450,9 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
         <div class="project-arch">
           <div class="arch-title">ARCHITECTURE</div>
           <div class="arch-flow">
-            <span class="arch-node">MySQL ×2</span>
-            <span class="arch-arrow">→</span>
-            <span class="arch-node violet">Airflow DAG</span>
-            <span class="arch-arrow">→</span>
-            <span class="arch-node orange">Pandas ETL</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-node">MySQL ×2</span><span class="arch-arrow">→</span>
+            <span class="arch-node violet">Airflow DAG</span><span class="arch-arrow">→</span>
+            <span class="arch-node orange">Pandas ETL</span><span class="arch-arrow">→</span>
             <span class="arch-node">SQL Server DWH</span>
           </div>
         </div>
@@ -622,7 +472,6 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
         </div>
       </div>
 
-      <!-- Project 3 -->
       <div class="project-card fade-up delay-2">
         <div class="project-header">
           <div class="project-num">PROJECT · 003 · CHANDUKAKA SARAF</div>
@@ -632,12 +481,9 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
         <div class="project-arch">
           <div class="arch-title">ARCHITECTURE</div>
           <div class="arch-flow">
-            <span class="arch-node">Sales Data</span>
-            <span class="arch-arrow">→</span>
-            <span class="arch-node violet">Config Table</span>
-            <span class="arch-arrow">→</span>
-            <span class="arch-node orange">Stored Procs</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-node">Sales Data</span><span class="arch-arrow">→</span>
+            <span class="arch-node violet">Config Table</span><span class="arch-arrow">→</span>
+            <span class="arch-node orange">Stored Procs</span><span class="arch-arrow">→</span>
             <span class="arch-node">Payout Report</span>
           </div>
         </div>
@@ -657,7 +503,6 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
         </div>
       </div>
 
-      <!-- Project 4 -->
       <div class="project-card fade-up">
         <div class="project-header">
           <div class="project-num">PROJECT · 004 · TEGTIGON</div>
@@ -667,12 +512,9 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
         <div class="project-arch">
           <div class="arch-title">ARCHITECTURE</div>
           <div class="arch-flow">
-            <span class="arch-node">Web App</span>
-            <span class="arch-arrow">→</span>
-            <span class="arch-node violet">Schema Design</span>
-            <span class="arch-arrow">→</span>
-            <span class="arch-node orange">Procs & Triggers</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-node">Web App</span><span class="arch-arrow">→</span>
+            <span class="arch-node violet">Schema Design</span><span class="arch-arrow">→</span>
+            <span class="arch-node orange">Procs & Triggers</span><span class="arch-arrow">→</span>
             <span class="arch-node">Reporting Layer</span>
           </div>
         </div>
@@ -692,7 +534,6 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
         </div>
       </div>
 
-      <!-- Project 5 -->
       <div class="project-card fade-up delay-1" style="border-color:rgba(124,58,237,0.35);">
         <div class="project-header">
           <div class="project-num" style="color:#A78BFA;">PROJECT · 005 · FLAGSHIP</div>
@@ -702,12 +543,9 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
         <div class="project-arch">
           <div class="arch-title">ARCHITECTURE</div>
           <div class="arch-flow">
-            <span class="arch-node">Gold Rate API</span>
-            <span class="arch-arrow">→</span>
-            <span class="arch-node violet">Oracle DB</span>
-            <span class="arch-arrow">→</span>
-            <span class="arch-node orange">ML Model</span>
-            <span class="arch-arrow">→</span>
+            <span class="arch-node">Gold Rate API</span><span class="arch-arrow">→</span>
+            <span class="arch-node violet">Oracle DB</span><span class="arch-arrow">→</span>
+            <span class="arch-node orange">ML Model</span><span class="arch-arrow">→</span>
             <span class="arch-node">Pricing Engine</span>
           </div>
         </div>
@@ -731,7 +569,6 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-inner">
     <div class="section-tag fade-up">Career Timeline</div>
@@ -739,65 +576,32 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
     <div class="divider"></div>
     <div class="timeline">
 
-      <!-- Job 1 -->
       <div class="timeline-item fade-up">
         <div class="timeline-dot"></div>
         <div class="exp-company">CHANDUKAKA SARAF SONS & PVT LTD</div>
         <div class="exp-role">Data Analyst</div>
         <div class="exp-period">January 2025 – Present · Pune, Maharashtra</div>
-        <div class="exp-desc">
-          Working on end-to-end data analytics for a multi-branch jewelry retail business. Responsible for pipeline design, Power BI reporting, SQL development, and Python automation — covering the full analytics stack from raw data to business insight.
-        </div>
+        <div class="exp-desc">Working on end-to-end data analytics for a multi-branch jewelry retail business. Responsible for pipeline design, Power BI reporting, SQL development, and Python automation — covering the full analytics stack from raw data to business insight.</div>
         <div class="exp-achievements">
-          <div class="achievement">
-            <div class="achievement-icon">🏗</div>
-            <div class="achievement-text"><strong>Medallion Pipeline:</strong> Designed and implemented a complete Microsoft Fabric analytics pipeline using SQL and Python (Bronze → Silver → Gold), enabling seamless data transformation and multi-branch reporting.</div>
-          </div>
-          <div class="achievement">
-            <div class="achievement-icon">⚡</div>
-            <div class="achievement-text"><strong>SQL Optimization:</strong> Developed and optimized complex SQL queries, stored procedures, and database objects — improving query performance by <strong>30%</strong> across critical reporting paths.</div>
-          </div>
-          <div class="achievement">
-            <div class="achievement-icon">📊</div>
-            <div class="achievement-text"><strong>Power BI Dashboards:</strong> Built interactive Power BI dashboards to track sales trends, branch performance, and key KPIs — giving leadership real-time visibility across all branches.</div>
-          </div>
-          <div class="achievement">
-            <div class="achievement-icon">🤖</div>
-            <div class="achievement-text"><strong>Reporting Automation:</strong> Automated reporting workflows using Python (Pandas), reducing manual effort and saving <strong>10+ hours per week</strong> across the business.</div>
-          </div>
-          <div class="achievement">
-            <div class="achievement-icon">🔍</div>
-            <div class="achievement-text"><strong>Data Quality:</strong> Ensured data quality through validation, cleansing, and transformation processes using SQL and Python — maintaining reliable data across all reporting systems.</div>
-          </div>
+          <div class="achievement"><div class="achievement-icon">🏗</div><div class="achievement-text"><strong>Medallion Pipeline:</strong> Designed and implemented a complete Microsoft Fabric analytics pipeline using SQL and Python (Bronze → Silver → Gold), enabling seamless data transformation and multi-branch reporting.</div></div>
+          <div class="achievement"><div class="achievement-icon">⚡</div><div class="achievement-text"><strong>SQL Optimization:</strong> Developed and optimized complex SQL queries, stored procedures, and database objects — improving query performance by <strong>30%</strong> across critical reporting paths.</div></div>
+          <div class="achievement"><div class="achievement-icon">📊</div><div class="achievement-text"><strong>Power BI Dashboards:</strong> Built interactive Power BI dashboards to track sales trends, branch performance, and key KPIs — giving leadership real-time visibility across all branches.</div></div>
+          <div class="achievement"><div class="achievement-icon">🤖</div><div class="achievement-text"><strong>Reporting Automation:</strong> Automated reporting workflows using Python (Pandas), reducing manual effort and saving <strong>10+ hours per week</strong> across the business.</div></div>
+          <div class="achievement"><div class="achievement-icon">🔍</div><div class="achievement-text"><strong>Data Quality:</strong> Ensured data quality through validation, cleansing, and transformation processes using SQL and Python — maintaining reliable data across all reporting systems.</div></div>
         </div>
       </div>
 
-      <!-- Job 2 -->
       <div class="timeline-item fade-up delay-1">
         <div class="timeline-dot violet"></div>
         <div class="exp-company violet">TEGTIGON</div>
         <div class="exp-role">SQL Developer</div>
         <div class="exp-period">October 2023 – December 2024 · India</div>
-        <div class="exp-desc">
-          Worked as a SQL Developer on an insurance web application — responsible for database design, query development, stored procedure engineering, and performance optimization across a production system where data integrity was critical.
-        </div>
+        <div class="exp-desc">Worked as a SQL Developer on an insurance web application — responsible for database design, query development, stored procedure engineering, and performance optimization across a production system where data integrity was critical.</div>
         <div class="exp-achievements">
-          <div class="achievement">
-            <div class="achievement-icon">🗄</div>
-            <div class="achievement-text"><strong>Database Development:</strong> Designed robust database schemas to store, manage, and retrieve insurance data efficiently — supporting dynamic web application functionality with high performance and data integrity.</div>
-          </div>
-          <div class="achievement">
-            <div class="achievement-icon">⚡</div>
-            <div class="achievement-text"><strong>Query & Procedure Engineering:</strong> Developed and optimized complex SQL queries, stored procedures, functions, and triggers — improving data processing efficiency and reducing execution time significantly.</div>
-          </div>
-          <div class="achievement">
-            <div class="achievement-icon">📈</div>
-            <div class="achievement-text"><strong>Performance Tuning:</strong> Applied indexing, query tuning, and execution plan analysis to ensure high performance and scalability under concurrent web application load.</div>
-          </div>
-          <div class="achievement">
-            <div class="achievement-icon">📋</div>
-            <div class="achievement-text"><strong>Reporting Layer:</strong> Designed data transformations including roll-ups and aggregations to support business reporting and analytics needs across the insurance platform.</div>
-          </div>
+          <div class="achievement"><div class="achievement-icon">🗄</div><div class="achievement-text"><strong>Database Development:</strong> Designed robust database schemas to store, manage, and retrieve insurance data efficiently — supporting dynamic web application functionality with high performance and data integrity.</div></div>
+          <div class="achievement"><div class="achievement-icon">⚡</div><div class="achievement-text"><strong>Query & Procedure Engineering:</strong> Developed and optimized complex SQL queries, stored procedures, functions, and triggers — improving data processing efficiency and reducing execution time significantly.</div></div>
+          <div class="achievement"><div class="achievement-icon">📈</div><div class="achievement-text"><strong>Performance Tuning:</strong> Applied indexing, query tuning, and execution plan analysis to ensure high performance and scalability under concurrent web application load.</div></div>
+          <div class="achievement"><div class="achievement-icon">📋</div><div class="achievement-text"><strong>Reporting Layer:</strong> Designed data transformations including roll-ups and aggregations to support business reporting and analytics needs across the insurance platform.</div></div>
         </div>
       </div>
 
@@ -805,66 +609,24 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
 <section id="certifications">
   <div class="section-inner">
     <div class="section-tag fade-up">Credentials</div>
     <h2 class="section-title fade-up delay-1">Education & Certifications</h2>
     <p class="section-desc fade-up delay-2">Academic foundation in AI combined with hands-on platform certifications.</p>
     <div class="cert-grid">
-      <div class="cert-card fade-up">
-        <div class="cert-icon">🎓</div>
-        <div class="cert-name">MCA — Artificial Intelligence</div>
-        <div class="cert-issuer">PARUL UNIVERSITY · 2026</div>
-        <div class="cert-status cert-progress">⏳ Pursuing</div>
-      </div>
-      <div class="cert-card fade-up delay-1">
-        <div class="cert-icon">🎓</div>
-        <div class="cert-name">BSc</div>
-        <div class="cert-issuer">2022 · 74%</div>
-        <div class="cert-status cert-earned">✓ Completed</div>
-      </div>
-      <div class="cert-card fade-up delay-2">
-        <div class="cert-icon">🗄</div>
-        <div class="cert-name">SQL for Data Science</div>
-        <div class="cert-issuer">COURSERA</div>
-        <div class="cert-status cert-earned">✓ Earned</div>
-      </div>
-      <div class="cert-card fade-up delay-3">
-        <div class="cert-icon">🐍</div>
-        <div class="cert-name">Python for Data Analysis</div>
-        <div class="cert-issuer">COURSERA / IBM</div>
-        <div class="cert-status cert-earned">✓ Earned</div>
-      </div>
-      <div class="cert-card fade-up">
-        <div class="cert-icon">📊</div>
-        <div class="cert-name">Power BI Data Analyst</div>
-        <div class="cert-issuer">MICROSOFT / PL-300</div>
-        <div class="cert-status cert-progress">⏳ Planned</div>
-      </div>
-      <div class="cert-card fade-up delay-1">
-        <div class="cert-icon">🧱</div>
-        <div class="cert-name">Microsoft Fabric Analytics</div>
-        <div class="cert-issuer">MICROSOFT</div>
-        <div class="cert-status cert-progress">⏳ Planned</div>
-      </div>
-      <div class="cert-card fade-up delay-2">
-        <div class="cert-icon">☁</div>
-        <div class="cert-name">Azure Data Engineer</div>
-        <div class="cert-issuer">MICROSOFT / DP-203</div>
-        <div class="cert-status cert-progress">⏳ Planned</div>
-      </div>
-      <div class="cert-card fade-up delay-3">
-        <div class="cert-icon">🤖</div>
-        <div class="cert-name">ML Specialization</div>
-        <div class="cert-issuer">DeepLearning.AI</div>
-        <div class="cert-status cert-progress">⏳ Planned</div>
-      </div>
+      <div class="cert-card fade-up"><div class="cert-icon">🎓</div><div class="cert-name">MCA — Artificial Intelligence</div><div class="cert-issuer">PARUL UNIVERSITY · 2026</div><div class="cert-status cert-progress">⏳ Pursuing</div></div>
+      <div class="cert-card fade-up delay-1"><div class="cert-icon">🎓</div><div class="cert-name">BSc</div><div class="cert-issuer">2022 · 74%</div><div class="cert-status cert-earned">✓ Completed</div></div>
+      <div class="cert-card fade-up delay-2"><div class="cert-icon">🗄</div><div class="cert-name">SQL for Data Science</div><div class="cert-issuer">COURSERA</div><div class="cert-status cert-earned">✓ Earned</div></div>
+      <div class="cert-card fade-up delay-3"><div class="cert-icon">🐍</div><div class="cert-name">Python for Data Analysis</div><div class="cert-issuer">COURSERA / IBM</div><div class="cert-status cert-earned">✓ Earned</div></div>
+      <div class="cert-card fade-up"><div class="cert-icon">📊</div><div class="cert-name">Power BI Data Analyst</div><div class="cert-issuer">MICROSOFT / PL-300</div><div class="cert-status cert-progress">⏳ Planned</div></div>
+      <div class="cert-card fade-up delay-1"><div class="cert-icon">🧱</div><div class="cert-name">Microsoft Fabric Analytics</div><div class="cert-issuer">MICROSOFT</div><div class="cert-status cert-progress">⏳ Planned</div></div>
+      <div class="cert-card fade-up delay-2"><div class="cert-icon">☁</div><div class="cert-name">Azure Data Engineer</div><div class="cert-issuer">MICROSOFT / DP-203</div><div class="cert-status cert-progress">⏳ Planned</div></div>
+      <div class="cert-card fade-up delay-3"><div class="cert-icon">🤖</div><div class="cert-name">ML Specialization</div><div class="cert-issuer">DeepLearning.AI</div><div class="cert-status cert-progress">⏳ Planned</div></div>
     </div>
   </div>
 </section>
 
-<!-- GITHUB -->
 <section id="github-section">
   <div class="section-inner">
     <div class="section-tag fade-up">Open Source</div>
@@ -872,38 +634,10 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
     <div class="divider"></div>
     <div class="github-grid">
       <div class="github-repos fade-up">
-        <div class="repo-card">
-          <div class="repo-name">📦 inventory-airflow-pipeline</div>
-          <div class="repo-desc">Production Airflow DAG for daily inventory historicization from two MySQL sources to a SQL Server data warehouse. Idempotent deletes, NaN sanitization, and data quality checks.</div>
-          <div class="repo-meta">
-            <span class="repo-lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
-            <span>⭐ Stars</span><span>🍴 Forks</span>
-          </div>
-        </div>
-        <div class="repo-card">
-          <div class="repo-name">🏭 fabric-medallion-pipeline</div>
-          <div class="repo-desc">End-to-end Microsoft Fabric analytics pipeline using Medallion Architecture (Bronze → Silver → Gold) for multi-branch jewelry retail reporting.</div>
-          <div class="repo-meta">
-            <span class="repo-lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
-            <span>⭐ Stars</span><span>🍴 Forks</span>
-          </div>
-        </div>
-        <div class="repo-card">
-          <div class="repo-name">💰 sales-incentive-engine</div>
-          <div class="repo-desc">Configurable MySQL stored procedure framework for rule-based sales incentive calculations. Finance-managed config table drives all payout logic automatically.</div>
-          <div class="repo-meta">
-            <span class="repo-lang"><span class="lang-dot" style="background:#e38c00"></span> SQL</span>
-            <span>⭐ Stars</span><span>🍴 Forks</span>
-          </div>
-        </div>
-        <div class="repo-card">
-          <div class="repo-name">💎 jewelry-pricing-oracle</div>
-          <div class="repo-desc">Self-learning ML pricing engine using regression on Oracle transaction data with live gold rate API integration. Retrains weekly on sales actuals.</div>
-          <div class="repo-meta">
-            <span class="repo-lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span>
-            <span>⭐ Stars</span><span>🍴 Forks</span>
-          </div>
-        </div>
+        <div class="repo-card"><div class="repo-name">📦 inventory-airflow-pipeline</div><div class="repo-desc">Production Airflow DAG for daily inventory historicization from two MySQL sources to a SQL Server data warehouse. Idempotent deletes, NaN sanitization, and data quality checks.</div><div class="repo-meta"><span class="repo-lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span><span>⭐ Stars</span><span>🍴 Forks</span></div></div>
+        <div class="repo-card"><div class="repo-name">🏭 fabric-medallion-pipeline</div><div class="repo-desc">End-to-end Microsoft Fabric analytics pipeline using Medallion Architecture (Bronze → Silver → Gold) for multi-branch jewelry retail reporting.</div><div class="repo-meta"><span class="repo-lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span><span>⭐ Stars</span><span>🍴 Forks</span></div></div>
+        <div class="repo-card"><div class="repo-name">💰 sales-incentive-engine</div><div class="repo-desc">Configurable MySQL stored procedure framework for rule-based sales incentive calculations. Finance-managed config table drives all payout logic automatically.</div><div class="repo-meta"><span class="repo-lang"><span class="lang-dot" style="background:#e38c00"></span> SQL</span><span>⭐ Stars</span><span>🍴 Forks</span></div></div>
+        <div class="repo-card"><div class="repo-name">💎 jewelry-pricing-oracle</div><div class="repo-desc">Self-learning ML pricing engine using regression on Oracle transaction data with live gold rate API integration. Retrains weekly on sales actuals.</div><div class="repo-meta"><span class="repo-lang"><span class="lang-dot" style="background:#3572A5"></span> Python</span><span>⭐ Stars</span><span>🍴 Forks</span></div></div>
       </div>
       <div class="contrib-box fade-up delay-1">
         <div class="contrib-title">Contribution Activity — Last 12 Months</div>
@@ -919,61 +653,44 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
         </div>
         <div style="margin-top:22px;padding-top:20px;border-top:1px solid var(--border);">
           <p style="font-size:0.82rem;color:var(--text-muted);font-family:var(--mono);">🔗 github.com/nik-patil-123</p>
-          <p style="font-size:0.82rem;color:var(--text-muted);margin-top:8px;">Upload your real projects to get actual stars and contribution data visible to recruiters.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BLOG -->
 <section id="blog">
   <div class="section-inner">
     <div class="section-tag fade-up">Writing</div>
     <h2 class="section-title fade-up delay-1">Technical Blog</h2>
     <p class="section-desc fade-up delay-2">Notes from the trenches — things I actually debugged, built, or figured out the hard way.</p>
     <div class="blog-grid">
-      <div class="blog-card fade-up">
+      <div class="blog-card fade-up" id="blog-sql-optimization" style="cursor:pointer;" onclick="toggleBlogPost('blog-sql-optimization')">
         <div class="blog-topic">SQL Optimization</div>
         <div class="blog-title">How I Cut Query Time by 30%: A Real Production Story</div>
-        <div class="blog-excerpt">The exact queries I rewrote, the indexes I added, and the execution plan analysis that revealed where the time was actually going. No theory — just what worked in production at a jewelry ERP system.</div>
-        <div class="blog-meta"><span class="blog-date">Coming soon</span><span class="blog-read">Write this first →</span></div>
+        <div class="blog-excerpt blog-excerpt-short">The exact queries I rewrote, the indexes I added, and the execution plan analysis that revealed where the time was actually going. No theory — just what worked in production.</div>
+        <div class="blog-full-content" style="display:none;margin-top:18px;padding-top:18px;border-top:1px solid var(--border);">
+          <p style="font-size:0.86rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px;">When I joined Chandukaka Saraf as a Data Analyst, one of the first things I noticed was that our Power BI dashboards weren't loading the way they should. Branch managers would refresh a sales report and just&hellip; wait. Some scheduled jobs that fed our reporting tables were also running long enough that data wasn't ready when the morning reports needed it. Nobody had measured exactly how bad it was &mdash; it was just accepted as "the dashboard is slow today." I decided to actually measure it instead of guessing.</p>
+          <p style="font-size:0.82rem;color:var(--cyan);font-family:var(--mono);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.06em;">Finding where the time was going</p>
+          <p style="font-size:0.86rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px;">I pulled execution plans for the queries powering our most-used dashboards and the nightly jobs feeding them. A few patterns showed up fast: some queries pulled far more columns than the report ever used, a few were written as nested subqueries where a JOIN would let the optimizer do its job properly, and a couple of the worst offenders were missing indexes entirely on the columns they filtered or joined on.</p>
+          <p style="font-size:0.82rem;color:var(--cyan);font-family:var(--mono);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.06em;">What I changed</p>
+          <p style="font-size:0.86rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px;">I prioritized the highest-impact queries first rather than rewriting everything at once, so I could measure each fix individually. Added targeted indexes (not blanket ones &mdash; that costs you on writes), rewrote the worst subqueries as CTEs or direct joins, and trimmed SELECT statements to only the columns actually used downstream.</p>
+          <p style="font-size:0.82rem;color:var(--cyan);font-family:var(--mono);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.06em;">The result</p>
+          <p style="font-size:0.86rem;color:var(--text-muted);line-height:1.8;margin-bottom:14px;">Average execution time improved by about 30% across the queries I touched. More importantly, morning jobs started finishing inside their window reliably, and the dashboards people checked first thing stopped being a daily complaint.</p>
+          <p style="font-size:0.82rem;color:var(--cyan);font-family:var(--mono);margin-bottom:8px;text-transform:uppercase;letter-spacing:0.06em;">The lesson</p>
+          <p style="font-size:0.86rem;color:var(--text-muted);line-height:1.8;">Measure before you optimize, and fix the highest-impact queries first. Nothing exotic here &mdash; indexing, JOIN restructuring, and trimming bloat, applied with some patience and actual measurement instead of guessing.</p>
+        </div>
+        <div class="blog-meta"><span class="blog-date">Jun 2026</span><span class="blog-read blog-toggle-label">Read full post →</span></div>
       </div>
-      <div class="blog-card fade-up delay-1">
-        <div class="blog-topic">Data Engineering</div>
-        <div class="blog-title">Idempotent ETL: The Bug That Duplicated My Data (and How I Fixed It)</div>
-        <div class="blog-excerpt">A post-mortem on a real duplication bug in an Airflow DAG — the root cause (a flawed DELETE condition on source timestamps), the fix, and the pattern that makes it impossible to happen again.</div>
-        <div class="blog-meta"><span class="blog-date">Coming soon</span><span class="blog-read">Write this second →</span></div>
-      </div>
-      <div class="blog-card fade-up delay-2">
-        <div class="blog-topic">Microsoft Fabric</div>
-        <div class="blog-title">Medallion Architecture in Practice: What No Tutorial Tells You</div>
-        <div class="blog-excerpt">The real decisions you face when implementing Bronze-Silver-Gold in Microsoft Fabric — schema evolution, partition strategy, and when the Gold layer is clean enough to trust for BI.</div>
-        <div class="blog-meta"><span class="blog-date">Coming soon</span><span class="blog-read">Write this third →</span></div>
-      </div>
-      <div class="blog-card fade-up">
-        <div class="blog-topic">PL/SQL</div>
-        <div class="blog-title">Stored Procedures vs Application Logic: Where I Draw the Line</div>
-        <div class="blog-excerpt">After building incentive calculation engines and insurance data layers entirely in stored procedures, here's when I think database-side logic is the right call — and when it becomes a maintenance nightmare.</div>
-        <div class="blog-meta"><span class="blog-date">Coming soon</span><span class="blog-read">Draft in progress →</span></div>
-      </div>
-      <div class="blog-card fade-up delay-1">
-        <div class="blog-topic">Apache Airflow</div>
-        <div class="blog-title">Airflow DAG Patterns I Use in Production (Not the Docs Examples)</div>
-        <div class="blog-excerpt">The retry logic, sensor patterns, and XCom strategies that actually matter when your DAG runs every night and the business notices when it fails. Practical, not theoretical.</div>
-        <div class="blog-meta"><span class="blog-date">Coming soon</span><span class="blog-read">Draft in progress →</span></div>
-      </div>
-      <div class="blog-card fade-up delay-2">
-        <div class="blog-topic">Power BI</div>
-        <div class="blog-title">Building Dashboards That Stakeholders Actually Use</div>
-        <div class="blog-excerpt">The design decisions that separate Power BI dashboards that get bookmarked from ones that get ignored — learned from building KPI dashboards for jewelry retail leadership who had zero time for complexity.</div>
-        <div class="blog-meta"><span class="blog-date">Coming soon</span><span class="blog-read">Draft in progress →</span></div>
-      </div>
+      <div class="blog-card fade-up delay-1"><div class="blog-topic">Data Engineering</div><div class="blog-title">Idempotent ETL: The Bug That Duplicated My Data (and How I Fixed It)</div><div class="blog-excerpt">A post-mortem on a real duplication bug in an Airflow DAG — the root cause (a flawed DELETE condition on source timestamps), the fix, and the pattern that makes it impossible to happen again.</div><div class="blog-meta"><span class="blog-date">Coming soon</span><span class="blog-read">Write this second →</span></div></div>
+      <div class="blog-card fade-up delay-2"><div class="blog-topic">Microsoft Fabric</div><div class="blog-title">Medallion Architecture in Practice: What No Tutorial Tells You</div><div class="blog-excerpt">The real decisions you face when implementing Bronze-Silver-Gold in Microsoft Fabric — schema evolution, partition strategy, and when the Gold layer is clean enough to trust for BI.</div><div class="blog-meta"><span class="blog-date">Coming soon</span><span class="blog-read">Write this third →</span></div></div>
+      <div class="blog-card fade-up"><div class="blog-topic">PL/SQL</div><div class="blog-title">Stored Procedures vs Application Logic: Where I Draw the Line</div><div class="blog-excerpt">After building incentive calculation engines and insurance data layers entirely in stored procedures, here's when I think database-side logic is the right call — and when it becomes a maintenance nightmare.</div><div class="blog-meta"><span class="blog-date">Coming soon</span><span class="blog-read">Draft in progress →</span></div></div>
+      <div class="blog-card fade-up delay-1"><div class="blog-topic">Apache Airflow</div><div class="blog-title">Airflow DAG Patterns I Use in Production (Not the Docs Examples)</div><div class="blog-excerpt">The retry logic, sensor patterns, and XCom strategies that actually matter when your DAG runs every night and the business notices when it fails. Practical, not theoretical.</div><div class="blog-meta"><span class="blog-date">Coming soon</span><span class="blog-read">Draft in progress →</span></div></div>
+      <div class="blog-card fade-up delay-2"><div class="blog-topic">Power BI</div><div class="blog-title">Building Dashboards That Stakeholders Actually Use</div><div class="blog-excerpt">The design decisions that separate Power BI dashboards that get bookmarked from ones that get ignored — learned from building KPI dashboards for jewelry retail leadership who had zero time for complexity.</div><div class="blog-meta"><span class="blog-date">Coming soon</span><span class="blog-read">Draft in progress →</span></div></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
   <div class="section-inner">
     <div class="section-tag fade-up">Get in Touch</div>
@@ -986,50 +703,25 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border); paddin
           <p>I'm looking for opportunities in Data Engineering, SQL Development, or Analytics Engineering — in Pune, Mumbai, or remote. If your team works with real data problems at scale, I'd love to talk.</p>
         </div>
         <div class="contact-links">
-          <a href="mailto:nikhilkate0622@gmail.com" class="contact-link-item">
-            <div class="contact-link-icon">✉</div>
-            <div><div class="contact-link-label">Email</div><div class="contact-link-val">nikhilkate0622@gmail.com</div></div>
-          </a>
-          <a href="tel:+917397975970" class="contact-link-item">
-            <div class="contact-link-icon">📞</div>
-            <div><div class="contact-link-label">Phone</div><div class="contact-link-val">+91 73979 75970</div></div>
-          </a>
-          <a href="https://github.com/nik-patil-123" target="_blank" class="contact-link-item">
-            <div class="contact-link-icon">🐙</div>
-            <div><div class="contact-link-label">GitHub</div><div class="contact-link-val">github.com/nik-patil-123</div></div>
-          </a>
-          <a href="#" class="contact-link-item" onclick="return false">
-            <div class="contact-link-icon">📍</div>
-            <div><div class="contact-link-label">Location</div><div class="contact-link-val">Pune, Maharashtra, India</div></div>
-          </a>
+          <a href="mailto:nikhilkate0622@gmail.com" class="contact-link-item"><div class="contact-link-icon">✉</div><div><div class="contact-link-label">Email</div><div class="contact-link-val">nikhilkate0622@gmail.com</div></div></a>
+          <a href="tel:+917397975970" class="contact-link-item"><div class="contact-link-icon">📞</div><div><div class="contact-link-label">Phone</div><div class="contact-link-val">+91 73979 75970</div></div></a>
+          <a href="https://github.com/nik-patil-123" target="_blank" class="contact-link-item"><div class="contact-link-icon">🐙</div><div><div class="contact-link-label">GitHub</div><div class="contact-link-val">github.com/nik-patil-123</div></div></a>
+          <a href="#" class="contact-link-item" onclick="return false"><div class="contact-link-icon">📍</div><div><div class="contact-link-label">Location</div><div class="contact-link-val">Pune, Maharashtra, India</div></div></a>
         </div>
       </div>
       <div class="contact-form fade-up delay-1">
         <div class="form-row">
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" placeholder="Jane Smith">
-          </div>
-          <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="jane@company.com">
-          </div>
+          <div class="form-group"><label>Your Name</label><input type="text" placeholder="Jane Smith"></div>
+          <div class="form-group"><label>Email Address</label><input type="email" placeholder="jane@company.com"></div>
         </div>
-        <div class="form-group">
-          <label>Subject</label>
-          <input type="text" placeholder="Data Engineer role at Acme Corp">
-        </div>
-        <div class="form-group">
-          <label>Message</label>
-          <textarea placeholder="Tell me about the role, the tech stack, and what you're building..."></textarea>
-        </div>
+        <div class="form-group"><label>Subject</label><input type="text" placeholder="Data Engineer role at Acme Corp"></div>
+        <div class="form-group"><label>Message</label><textarea placeholder="Tell me about the role, the tech stack, and what you're building..."></textarea></div>
         <button class="form-submit">✉ Send Message</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Nikhil Patil</div>
@@ -1051,6 +743,17 @@ for(let w=0; w<52; w++) {
     cell.className = 'cg-cell cg-' + (Math.random() > 0.4 ? Math.floor(Math.random()*4)+1 : 0);
     graph.appendChild(cell);
   }
+}
+
+function toggleBlogPost(id) {
+  const card = document.getElementById(id);
+  const full = card.querySelector('.blog-full-content');
+  const shortExcerpt = card.querySelector('.blog-excerpt-short');
+  const label = card.querySelector('.blog-toggle-label');
+  const isOpen = full.style.display !== 'none';
+  full.style.display = isOpen ? 'none' : 'block';
+  shortExcerpt.style.display = isOpen ? 'block' : 'none';
+  label.textContent = isOpen ? 'Read full post →' : 'Show less ↑';
 }
 
 function toggleMenu() {
